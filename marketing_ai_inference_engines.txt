@@ -1,0 +1,653 @@
+{
+  "inference_engines": {
+    "context_engine": {
+      "name": "محرك الذاكرة والسياق",
+      "description": "يحفظ ويحلل سياق الجلسة والتاريخ",
+      
+      "session_memory": {
+        "current_session": {
+          "session_id": "generated_uuid",
+          "start_time": "timestamp",
+          "user_profile": {},
+          "answers_given": {},
+          "answer_sequence": [],
+          "confidence_scores": {},
+          "flags_raised": [],
+          "insights_discovered": []
+        },
+        
+        "context_tracking": {
+          "business_stage": {
+            "possible_values": ["startup", "early_growth", "growth", "mature", "decline"],
+            "inferred_from": ["years_in_business", "revenue_trend", "team_size"],
+            "current_value": null,
+            "confidence": 0
+          },
+          "urgency_level": {
+            "possible_values": ["critical", "high", "medium", "low"],
+            "inferred_from": ["revenue_trend", "competition_pressure", "market_changes"],
+            "current_value": null,
+            "confidence": 0
+          },
+          "budget_tier": {
+            "possible_values": ["micro", "small", "medium", "large"],
+            "inferred_from": ["revenue", "marketing_budget", "team_size"],
+            "current_value": null,
+            "confidence": 0
+          },
+          "digital_maturity": {
+            "possible_values": ["beginner", "developing", "advanced", "expert"],
+            "score": 0,
+            "level": null
+          },
+          "market_position": {
+            "possible_values": ["leader", "challenger", "follower", "nicher"],
+            "inferred_from": ["market_share", "brand_awareness", "competitive_analysis"],
+            "current_value": null
+          }
+        }
+      },
+      
+      "long_term_memory": {
+        "historical_patterns": {
+          "storage": "database_of_past_cases",
+          "use": "pattern_matching_and_learning"
+        },
+        "successful_strategies": {
+          "by_sector": {},
+          "by_situation": {},
+          "success_indicators": {}
+        },
+        "failed_approaches": {
+          "common_mistakes": [],
+          "warning_signs": [],
+          "lessons_learned": []
+        },
+        "industry_benchmarks": {
+          "updated": "quarterly",
+          "sources": ["industry_reports", "competitor_analysis", "market_research"]
+        }
+      }
+    },
+
+    "relationship_engine": {
+      "name": "محرك العلاقات والارتباطات",
+      "description": "يربط الأسئلة والإجابات ويكتشف التبعيات",
+      
+      "dependency_mapping": {
+        "question_dependencies": {
+          "example_structure": {
+            "Q_FIN_001_revenue": {
+              "directly_affects": [
+                "Q_FIN_005_marketing_budget",
+                "Q_TEAM_001_team_size",
+                "Q_GOALS_001_growth_target"
+              ],
+              "indirectly_affects": [
+                "Q_STRATEGY_001_recommended_plan",
+                "Q_CHANNELS_001_channel_selection"
+              ],
+              "affected_by": [
+                "Q_BASIC_002_years_in_business",
+                "Q_MARKET_001_market_size"
+              ],
+              "correlation_strength": {
+                "with_marketing_budget": 0.85,
+                "with_team_size": 0.72,
+                "with_market_size": 0.65
+              },
+              "required_for_analysis": [
+                "financial_health_assessment",
+                "roi_prediction",
+                "budget_recommendation"
+              ]
+            }
+          }
+        },
+        
+        "logical_chains": {
+          "chain_1_financial_viability": {
+            "sequence": [
+              "Q_FIN_001_revenue",
+              "Q_FIN_002_costs",
+              "Q_FIN_003_profit_margin",
+              "Q_FIN_005_marketing_budget"
+            ],
+            "validates": "financial_sustainability",
+            "triggers_if_broken": "financial_risk_alert"
+          },
+          "chain_2_market_fit": {
+            "sequence": [
+              "Q_CUSTOMER_001_target_audience",
+              "Q_PRODUCT_001_offerings",
+              "Q_COMPETITIVE_001_differentiation",
+              "Q_MARKET_001_demand"
+            ],
+            "validates": "product_market_fit",
+            "triggers_if_broken": "positioning_risk_alert"
+          }
+        }
+      },
+      
+      "logical_rules": {
+        "consistency_rules": [
+          {
+            "rule_id": "RULE_001",
+            "name": "budget_revenue_consistency",
+            "condition": "marketing_budget / revenue > 0.30",
+            "severity": "critical",
+            "alert": "الميزانية التسويقية تتجاوز 30% من الإيرادات - غير مستدام",
+            "recommendation": "إعادة تقييم الميزانية أو زيادة الإيرادات",
+            "expert_assigned": "financial_analyst"
+          },
+          {
+            "rule_id": "RULE_002",
+            "name": "cac_ltv_ratio",
+            "condition": "cac > ltv",
+            "severity": "critical",
+            "alert": "تكلفة اكتساب العميل أعلى من قيمة العميل",
+            "recommendation": "تحسين كفاءة التسويق أو زيادة قيمة العميل",
+            "expert_assigned": "financial_analyst"
+          },
+          {
+            "rule_id": "RULE_003",
+            "name": "team_revenue_efficiency",
+            "condition": "revenue / team_size < sector_benchmark * 0.5",
+            "severity": "high",
+            "alert": "إنتاجية الفريق منخفضة مقارنة بالقطاع",
+            "recommendation": "تحسين العمليات أو إعادة هيكلة الفريق",
+            "expert_assigned": "operations_expert"
+          },
+          {
+            "rule_id": "RULE_004",
+            "name": "no_digital_presence_modern_sector",
+            "condition": "digital_maturity_score < 20 AND sector IN ['retail', 'fnb', 'fitness']",
+            "severity": "high",
+            "alert": "غياب شبه كامل للتواجد الرقمي في قطاع يتطلب ذلك",
+            "recommendation": "بناء الحضور الرقمي بشكل عاجل",
+            "expert_assigned": "digital_marketing_expert"
+          }
+        ],
+        
+        "contradiction_detection": {
+          "enabled": true,
+          "auto_flag": true,
+          "patterns": [
+            {
+              "pattern_id": "CONTRA_001",
+              "name": "claims_growth_but_declining_metrics",
+              "conditions": [
+                "user_says_business_growing",
+                "revenue_trend == 'declining'",
+                "customer_count_trend == 'declining'"
+              ],
+              "action": "request_clarification",
+              "message": "هناك تناقض بين تصريحك بأن العمل ينمو والأرقام التي تشير لانخفاض"
+            },
+            {
+              "pattern_id": "CONTRA_002",
+              "name": "no_competition_but_saturated_market",
+              "conditions": [
+                "user_says_no_competition",
+                "market_analysis_shows_high_competition"
+              ],
+              "action": "educate_and_clarify",
+              "message": "تشير البيانات لوجود منافسة عالية في القطاع"
+            }
+          ]
+        },
+        
+        "opportunity_detection": {
+          "patterns": [
+            {
+              "pattern_id": "OPP_001",
+              "name": "underutilized_budget",
+              "conditions": [
+                "marketing_budget_spent < marketing_budget_allocated * 0.5",
+                "revenue_growing"
+              ],
+              "opportunity": "هناك ميزانية غير مستغلة يمكن استثمارها للنمو",
+              "recommendation": "زيادة الاستثمار التسويقي لتسريع النمو"
+            },
+            {
+              "pattern_id": "OPP_002",
+              "name": "high_satisfaction_low_awareness",
+              "conditions": [
+                "customer_satisfaction_score > 8",
+                "brand_awareness_score < 4"
+              ],
+              "opportunity": "عملاء راضون جداً لكن الوعي بالعلامة منخفض",
+              "recommendation": "برنامج إحالة مكثف واستثمار في بناء الوعي"
+            }
+          ]
+        }
+      }
+    },
+
+    "scoring_engine": {
+      "name": "محرك التسجيل والتقييم",
+      "description": "يقيم ويسجل كل جانب من جوانب العمل",
+      
+      "maturity_assessment": {
+        "digital_maturity": {
+          "total_score": 0,
+          "max_score": 100,
+          "components": {
+            "website_quality": {
+              "weight": 0.25,
+              "score": 0,
+              "factors": [
+                {"factor": "has_website", "points": 20},
+                {"factor": "mobile_responsive", "points": 15},
+                {"factor": "fast_loading", "points": 10},
+                {"factor": "seo_optimized", "points": 15},
+                {"factor": "has_analytics", "points": 15},
+                {"factor": "conversion_optimized", "points": 15},
+                {"factor": "secure_https", "points": 10}
+              ]
+            },
+            "social_media_presence": {
+              "weight": 0.20,
+              "score": 0,
+              "factors": [
+                {"factor": "active_on_instagram", "points": 15},
+                {"factor": "active_on_facebook", "points": 10},
+                {"factor": "active_on_linkedin", "points": 10},
+                {"factor": "consistent_posting", "points": 20},
+                {"factor": "high_engagement", "points": 25},
+                {"factor": "growing_followers", "points": 20}
+              ]
+            },
+            "digital_advertising": {
+              "weight": 0.20,
+              "score": 0,
+              "factors": [
+                {"factor": "uses_google_ads", "points": 25},
+                {"factor": "uses_social_ads", "points": 25},
+                {"factor": "tracks_roi", "points": 30},
+                {"factor": "optimizes_campaigns", "points": 20}
+              ]
+            },
+            "email_marketing": {
+              "weight": 0.15,
+              "score": 0,
+              "factors": [
+                {"factor": "has_email_list", "points": 25},
+                {"factor": "regular_campaigns", "points": 25},
+                {"factor": "segmented_lists", "points": 25},
+                {"factor": "automated_flows", "points": 25}
+              ]
+            },
+            "analytics_usage": {
+              "weight": 0.20,
+              "score": 0,
+              "factors": [
+                {"factor": "uses_google_analytics", "points": 20},
+                {"factor": "tracks_kpis", "points": 25},
+                {"factor": "data_driven_decisions", "points": 30},
+                {"factor": "regular_reporting", "points": 25}
+              ]
+            }
+          },
+          "level_thresholds": {
+            "beginner": [0, 25],
+            "developing": [26, 50],
+            "advanced": [51, 75],
+            "expert": [76, 100]
+          }
+        },
+        
+        "marketing_maturity": {
+          "total_score": 0,
+          "max_score": 100,
+          "components": {
+            "strategy_clarity": {
+              "weight": 0.30,
+              "factors": [
+                "has_written_strategy",
+                "clear_target_audience",
+                "defined_positioning",
+                "measurable_goals",
+                "documented_processes"
+              ]
+            },
+            "execution_quality": {
+              "weight": 0.40,
+              "factors": [
+                "consistent_branding",
+                "regular_campaigns",
+                "multi_channel_presence",
+                "quality_content",
+                "customer_engagement"
+              ]
+            },
+            "measurement_capability": {
+              "weight": 0.30,
+              "factors": [
+                "tracks_metrics",
+                "calculates_roi",
+                "uses_attribution",
+                "reports_regularly",
+                "data_driven_optimization"
+              ]
+            }
+          }
+        },
+        
+        "organizational_readiness": {
+          "total_score": 0,
+          "max_score": 100,
+          "components": {
+            "team_capability": {
+              "weight": 0.35,
+              "score": 0
+            },
+            "budget_adequacy": {
+              "weight": 0.30,
+              "score": 0
+            },
+            "leadership_support": {
+              "weight": 0.20,
+              "score": 0
+            },
+            "process_maturity": {
+              "weight": 0.15,
+              "score": 0
+            }
+          }
+        }
+      },
+      
+      "risk_assessment": {
+        "overall_risk_score": 0,
+        "risk_level": null,
+        "risk_categories": {
+          "financial_risk": {
+            "score": 0,
+            "max": 10,
+            "factors": [
+              {"factor": "low_revenue", "weight": 0.25},
+              {"factor": "declining_trend", "weight": 0.30},
+              {"factor": "high_costs", "weight": 0.20},
+              {"factor": "insufficient_budget", "weight": 0.25}
+            ],
+            "threshold": {
+              "low": [0, 3],
+              "medium": [3.1, 6],
+              "high": [6.1, 8],
+              "critical": [8.1, 10]
+            }
+          },
+          "competitive_risk": {
+            "score": 0,
+            "max": 10,
+            "factors": [
+              {"factor": "high_competition", "weight": 0.30},
+              {"factor": "stronger_competitors", "weight": 0.25},
+              {"factor": "low_differentiation", "weight": 0.25},
+              {"factor": "market_saturation", "weight": 0.20}
+            ]
+          },
+          "execution_risk": {
+            "score": 0,
+            "max": 10,
+            "factors": [
+              {"factor": "limited_resources", "weight": 0.30},
+              {"factor": "skill_gaps", "weight": 0.25},
+              {"factor": "complex_strategy", "weight": 0.20},
+              {"factor": "tight_timeline", "weight": 0.25}
+            ]
+          },
+          "market_risk": {
+            "score": 0,
+            "max": 10,
+            "factors": [
+              {"factor": "declining_market", "weight": 0.30},
+              {"factor": "regulatory_changes", "weight": 0.20},
+              {"factor": "tech_disruption", "weight": 0.25},
+              {"factor": "economic_downturn", "weight": 0.25}
+            ]
+          }
+        }
+      },
+      
+      "opportunity_score": {
+        "overall_opportunity_score": 0,
+        "opportunity_level": null,
+        "opportunity_categories": {
+          "growth_potential": {
+            "score": 0,
+            "max": 10,
+            "factors": [
+              {"factor": "growing_market", "weight": 0.30},
+              {"factor": "underserved_segments", "weight": 0.25},
+              {"factor": "scalable_model", "weight": 0.25},
+              {"factor": "strong_fundamentals", "weight": 0.20}
+            ]
+          },
+          "market_opportunity": {
+            "score": 0,
+            "max": 10,
+            "factors": [
+              {"factor": "market_gaps", "weight": 0.35},
+              {"factor": "emerging_trends", "weight": 0.30},
+              {"factor": "weak_competition", "weight": 0.20},
+              {"factor": "high_demand", "weight": 0.15}
+            ]
+          },
+          "competitive_advantage": {
+            "score": 0,
+            "max": 10,
+            "factors": [
+              {"factor": "unique_offering", "weight": 0.30},
+              {"factor": "strong_brand", "weight": 0.25},
+              {"factor": "customer_loyalty", "weight": 0.25},
+              {"factor": "operational_excellence", "weight": 0.20}
+            ]
+          }
+        }
+      }
+    },
+
+    "inference_engine": {
+      "name": "محرك الاستنتاج والتنبؤ",
+      "description": "يستنتج الحقائق ويتنبأ بالنتائج",
+      
+      "inference_patterns": {
+        "pattern_struggling_business": {
+          "pattern_id": "INF_001",
+          "name": "أعمال في مرحلة حرجة",
+          "conditions": {
+            "all_of": [
+              {"field": "revenue_trend", "operator": "==", "value": "declining"},
+              {"field": "digital_maturity_score", "operator": "<", "value": 30},
+              {"field": "competition_level", "operator": "==", "value": "high"}
+            ]
+          },
+          "inference": "العمل في مرحلة حرجة ويحتاج تدخل عاجل",
+          "confidence": 0.90,
+          "recommended_plan": "emergency_plan",
+          "predicted_outcome_without_action": {
+            "6_months": "serious_decline_risk",
+            "12_months": "business_closure_risk_high",
+            "probability": 0.75
+          },
+          "recommended_actions": [
+            "immediate_revenue_boost_tactics",
+            "cost_optimization",
+            "digital_presence_building",
+            "competitive_repositioning"
+          ],
+          "assigned_experts": ["chief_strategist", "financial_analyst", "risk_manager"]
+        },
+        
+        "pattern_growth_opportunity": {
+          "pattern_id": "INF_002",
+          "name": "فرصة نمو كبيرة غير مستغلة",
+          "conditions": {
+            "all_of": [
+              {"field": "revenue_trend", "operator": "==", "value": "growing"},
+              {"field": "marketing_spend_percent", "operator": "<", "value": 5},
+              {"field": "customer_satisfaction", "operator": ">", "value": 7}
+            ]
+          },
+          "inference": "منتج ناجح لكن التسويق ضعيف - فرصة كبيرة للنمو",
+          "confidence": 0.85,
+          "recommended_plan": "aggressive_growth_plan",
+          "predicted_outcome_with_action": {
+            "6_months": "30_50_percent_growth",
+            "12_months": "double_revenue_potential",
+            "probability": 0.70
+          },
+          "recommended_budget_increase": "100_150_percent",
+          "expected_roi": "400_600_percent",
+          "assigned_experts": ["chief_strategist", "digital_marketing_expert", "growth_specialist"]
+        },
+        
+        "pattern_digital_transformation_ready": {
+          "pattern_id": "INF_003",
+          "name": "جاهز للتحول الرقمي",
+          "conditions": {
+            "all_of": [
+              {"field": "revenue", "operator": ">", "value": 1000000},
+              {"field": "digital_maturity_score", "operator": "<", "value": 40},
+              {"field": "team_size", "operator": ">", "value": 5},
+              {"field": "leadership_support", "operator": "==", "value": "high"}
+            ]
+          },
+          "inference": "الأعمال مستقرة ولديها موارد للتحول الرقمي",
+          "confidence": 0.80,
+          "recommended_plan": "digital_transformation_plan",
+          "timeline": "6_12_months",
+          "expected_impact": "significant_efficiency_and_growth",
+          "assigned_experts": ["digital_marketing_expert", "operations_expert", "data_scientist"]
+        },
+        
+        "pattern_brand_building_priority": {
+          "pattern_id": "INF_004",
+          "name": "بناء العلامة التجارية أولوية",
+          "conditions": {
+            "all_of": [
+              {"field": "brand_awareness", "operator": "<", "value": 3},
+              {"field": "product_quality", "operator": ">", "value": 7},
+              {"field": "years_in_business", "operator": "<", "value": 3}
+            ]
+          },
+          "inference": "منتج جيد لكن العلامة غير معروفة",
+          "confidence": 0.85,
+          "recommended_focus": "brand_building_and_awareness",
+          "channels": ["content_marketing", "pr", "social_media", "influencer_partnerships"],
+          "assigned_experts": ["brand_strategist", "digital_marketing_expert"]
+        }
+      },
+      
+      "predictive_models": {
+        "revenue_forecast": {
+          "model_id": "PRED_001",
+          "name": "توقع الإيرادات",
+          "algorithm": "time_series_with_external_factors",
+          "inputs": {
+            "required": [
+              "historical_revenue_12_months",
+              "marketing_budget",
+              "market_growth_rate"
+            ],
+            "optional": [
+              "seasonality_pattern",
+              "competitive_actions",
+              "economic_indicators"
+            ]
+          },
+          "output": {
+            "predicted_revenue_12_months": 0,
+            "confidence_interval": "±15%",
+            "best_case": 0,
+            "worst_case": 0,
+            "most_likely": 0
+          },
+          "accuracy_historical": 0.82
+        },
+        
+        "campaign_success_probability": {
+          "model_id": "PRED_002",
+          "name": "احتمالية نجاح الحملة",
+          "inputs": [
+            "campaign_budget",
+            "target_audience_size",
+            "message_quality_score",
+            "channel_fit_score",
+            "timing_score",
+            "creative_quality_score"
+          ],
+          "weights": {
+            "budget_adequacy": 0.20,
+            "audience_targeting": 0.25,
+            "message_quality": 0.20,
+            "channel_selection": 0.20,
+            "timing": 0.10,
+            "creative": 0.05
+          },
+          "output": {
+            "success_probability": 0,
+            "expected_roi": 0,
+            "confidence": 0
+          }
+        },
+        
+        "customer_lifetime_value": {
+          "model_id": "PRED_003",
+          "name": "قيمة العميل الدائمة",
+          "formula": "average_purchase_value * purchase_frequency * customer_lifespan * (1 - churn_rate)",
+          "inputs": [
+            "average_order_value",
+            "purchase_frequency_annual",
+            "estimated_customer_lifespan_years",
+            "churn_rate"
+          ],
+          "segment_by": ["customer_type", "acquisition_channel", "demographic"],
+          "use_for": ["cac_ltv_ratio", "budget_allocation", "retention_priority"]
+        },
+        
+        "market_share_projection": {
+          "model_id": "PRED_004",
+          "name": "توقع الحصة السوقية",
+          "inputs": [
+            "current_market_share",
+            "marketing_investment",
+            "competitive_intensity",
+            "differentiation_strength",
+            "market_growth_rate"
+          ],
+          "output": {
+            "projected_market_share_12_months": 0,
+            "path_to_leadership": "if_applicable",
+            "required_investment_for_target_share": 0
+          }
+        }
+      },
+      
+      "scenario_analysis": {
+        "enabled": true,
+        "scenarios": {
+          "conservative": {
+            "assumptions": "worst_case_market_conditions",
+            "growth_rate": 0.05,
+            "roi_expectation": "low"
+          },
+          "moderate": {
+            "assumptions": "normal_market_conditions",
+            "growth_rate": 0.15,
+            "roi_expectation": "medium"
+          },
+          "aggressive": {
+            "assumptions": "best_case_market_conditions",
+            "growth_rate": 0.30,
+            "roi_expectation": "high"
+          }
+        },
+        "simulation_count": 1000,
+        "confidence_level": 0.95
+      }
+    }
+  }
+}

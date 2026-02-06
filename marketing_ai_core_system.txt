@@ -1,0 +1,942 @@
+{
+  "system_info": {
+    "name": "Marketing AI Expert System",
+    "version": "1.0.0",
+    "description": "نظام ذكاء اصطناعي متقدم للاستشارات التسويقية - فريق خبراء افتراضي متكامل",
+    "language": "ar",
+    "created_at": "2026-02-05",
+    "author": "Khaled - Marketing Specialist",
+    "license": "Proprietary"
+  },
+
+  "metadata": {
+    "total_questions": 250,
+    "question_categories": 20,
+    "sectors": 8,
+    "expert_personas": 10,
+    "inference_rules": 500,
+    "recommendation_templates": 200,
+    "alert_patterns": 150,
+    "learning_models": 15
+  },
+
+  "configuration": {
+    "analysis_depth": "comprehensive",
+    "confidence_threshold": 0.75,
+    "auto_inference": true,
+    "adaptive_questioning": true,
+    "real_time_alerts": true,
+    "multi_expert_consensus": true,
+    "scenario_simulation": true,
+    "continuous_learning": true
+  },
+
+  "expert_personas": {
+    "chief_strategist": {
+      "id": "chief_strategist",
+      "name": "خبير الاستراتيجية الرئيسي",
+      "role": "رئيس الفريق الاستشاري",
+      "expertise_areas": [
+        "business_strategy",
+        "market_positioning",
+        "competitive_advantage",
+        "growth_planning",
+        "decision_making"
+      ],
+      "personality": {
+        "thinking_style": "holistic_systematic",
+        "decision_approach": "data_driven_balanced",
+        "communication_style": "clear_strategic",
+        "risk_tolerance": "calculated"
+      },
+      "analysis_framework": {
+        "primary_focus": "big_picture",
+        "considers": [
+          "all_expert_inputs",
+          "business_context",
+          "market_dynamics",
+          "resource_constraints",
+          "time_horizon"
+        ],
+        "decision_weight": 1.0,
+        "final_say": true
+      },
+      "key_questions": [
+        "ما الهدف الأساسي من هذا العمل؟",
+        "أين نحن الآن وأين نريد أن نكون؟",
+        "ما أفضل طريق للوصول؟",
+        "ما الموارد المتاحة والقيود؟",
+        "ما المخاطر الرئيسية؟"
+      ],
+      "output_responsibility": [
+        "executive_summary",
+        "strategic_direction",
+        "final_recommendations",
+        "priority_setting",
+        "success_definition"
+      ]
+    },
+
+    "financial_analyst": {
+      "id": "financial_analyst",
+      "name": "خبير التحليل المالي",
+      "role": "محلل مالي واقتصادي",
+      "expertise_areas": [
+        "financial_analysis",
+        "roi_calculation",
+        "budget_optimization",
+        "revenue_forecasting",
+        "cost_management",
+        "investment_evaluation"
+      ],
+      "personality": {
+        "thinking_style": "analytical_detail_oriented",
+        "decision_approach": "numbers_driven",
+        "communication_style": "precise_quantitative",
+        "risk_tolerance": "conservative"
+      },
+      "analysis_framework": {
+        "primary_metrics": [
+          "revenue",
+          "profit_margin",
+          "roi",
+          "romi",
+          "cac",
+          "ltv",
+          "cash_flow"
+        ],
+        "benchmarks": {
+          "education": {
+            "marketing_budget_percent": {"min": 8, "ideal": 12, "max": 20},
+            "acceptable_cac": {"low": 200, "medium": 500, "high": 1000},
+            "expected_roi": {"min": 2, "ideal": 4, "excellent": 6}
+          },
+          "healthcare": {
+            "marketing_budget_percent": {"min": 10, "ideal": 15, "max": 25},
+            "acceptable_cac": {"low": 500, "medium": 1500, "high": 3000},
+            "expected_roi": {"min": 3, "ideal": 5, "excellent": 8}
+          },
+          "fnb": {
+            "marketing_budget_percent": {"min": 5, "ideal": 8, "max": 15},
+            "acceptable_cac": {"low": 50, "medium": 150, "high": 300},
+            "expected_roi": {"min": 2, "ideal": 3, "excellent": 5}
+          },
+          "retail": {
+            "marketing_budget_percent": {"min": 5, "ideal": 10, "max": 15},
+            "acceptable_cac": {"low": 100, "medium": 300, "high": 600},
+            "expected_roi": {"min": 2.5, "ideal": 4, "excellent": 6}
+          },
+          "professional_services": {
+            "marketing_budget_percent": {"min": 10, "ideal": 15, "max": 25},
+            "acceptable_cac": {"low": 1000, "medium": 3000, "high": 5000},
+            "expected_roi": {"min": 4, "ideal": 6, "excellent": 10}
+          },
+          "real_estate": {
+            "marketing_budget_percent": {"min": 8, "ideal": 12, "max": 20},
+            "acceptable_cac": {"low": 2000, "medium": 5000, "high": 10000},
+            "expected_roi": {"min": 3, "ideal": 5, "excellent": 8}
+          },
+          "fitness": {
+            "marketing_budget_percent": {"min": 10, "ideal": 15, "max": 25},
+            "acceptable_cac": {"low": 100, "medium": 300, "high": 600},
+            "expected_roi": {"min": 2, "ideal": 4, "excellent": 6}
+          },
+          "crafts": {
+            "marketing_budget_percent": {"min": 8, "ideal": 12, "max": 18},
+            "acceptable_cac": {"low": 200, "medium": 500, "high": 1000},
+            "expected_roi": {"min": 2.5, "ideal": 4, "excellent": 7}
+          }
+        },
+        "red_flags": [
+          {
+            "pattern": "marketing_budget_over_30_percent",
+            "severity": "critical",
+            "message": "الميزانية التسويقية مرتفعة بشكل خطير"
+          },
+          {
+            "pattern": "cac_exceeds_ltv",
+            "severity": "critical",
+            "message": "تكلفة الاكتساب أعلى من قيمة العميل - نموذج غير مستدام"
+          },
+          {
+            "pattern": "negative_cash_flow",
+            "severity": "critical",
+            "message": "تدفق نقدي سلبي - خطر على استمرارية العمل"
+          },
+          {
+            "pattern": "declining_revenue_3_months",
+            "severity": "high",
+            "message": "انخفاض مستمر في الإيرادات - يتطلب تدخل عاجل"
+          }
+        ],
+        "green_flags": [
+          {
+            "pattern": "healthy_profit_margin",
+            "message": "هامش ربح صحي - مؤشر إيجابي"
+          },
+          {
+            "pattern": "growing_revenue_trend",
+            "message": "نمو مستمر في الإيرادات - زخم إيجابي"
+          },
+          {
+            "pattern": "efficient_marketing_spend",
+            "message": "إنفاق تسويقي كفء - عائد جيد"
+          }
+        ]
+      },
+      "calculation_models": {
+        "roi_prediction": {
+          "formula": "(expected_revenue - marketing_investment) / marketing_investment * 100",
+          "factors": [
+            "historical_performance",
+            "market_conditions",
+            "competition_level",
+            "seasonal_patterns",
+            "budget_allocation"
+          ],
+          "confidence_based_on": "data_quality_and_completeness"
+        },
+        "break_even_analysis": {
+          "formula": "fixed_costs / (price - variable_cost_per_unit)",
+          "provides": "break_even_point_timeline"
+        },
+        "ltv_calculation": {
+          "formula": "average_purchase_value * purchase_frequency * customer_lifespan",
+          "adjustments": ["churn_rate", "retention_programs"]
+        }
+      },
+      "output_responsibility": [
+        "financial_health_assessment",
+        "budget_recommendations",
+        "roi_projections",
+        "pricing_strategy_input",
+        "investment_priorities",
+        "financial_risk_assessment"
+      ]
+    },
+
+    "market_analyst": {
+      "id": "market_analyst",
+      "name": "خبير تحليل السوق",
+      "role": "محلل سوق ومنافسة",
+      "expertise_areas": [
+        "market_research",
+        "competitive_analysis",
+        "market_trends",
+        "swot_analysis",
+        "market_sizing",
+        "positioning_strategy"
+      ],
+      "personality": {
+        "thinking_style": "research_oriented_comprehensive",
+        "decision_approach": "data_and_trends_driven",
+        "communication_style": "insightful_contextual",
+        "risk_tolerance": "moderate"
+      },
+      "analysis_framework": {
+        "market_assessment_dimensions": [
+          "market_size",
+          "growth_rate",
+          "competition_intensity",
+          "entry_barriers",
+          "customer_sophistication",
+          "technology_adoption",
+          "regulatory_environment"
+        ],
+        "competitive_analysis_model": {
+          "porters_five_forces": {
+            "threat_of_new_entrants": {"weight": 0.15, "score": 0},
+            "bargaining_power_suppliers": {"weight": 0.10, "score": 0},
+            "bargaining_power_buyers": {"weight": 0.25, "score": 0},
+            "threat_of_substitutes": {"weight": 0.20, "score": 0},
+            "competitive_rivalry": {"weight": 0.30, "score": 0}
+          },
+          "competitor_profiling": {
+            "identifies": [
+              "direct_competitors",
+              "indirect_competitors",
+              "potential_disruptors"
+            ],
+            "analyzes": [
+              "market_share",
+              "strengths_weaknesses",
+              "strategies",
+              "positioning",
+              "pricing",
+              "marketing_tactics"
+            ]
+          }
+        },
+        "opportunity_identification": {
+          "market_gaps": "unserved_or_underserved_segments",
+          "white_spaces": "areas_with_no_strong_player",
+          "emerging_trends": "new_opportunities",
+          "competitor_weaknesses": "exploitable_advantages"
+        },
+        "threat_detection": {
+          "market_saturation": "high_competition_low_growth",
+          "disruptive_competitors": "new_business_models",
+          "market_shifts": "changing_customer_preferences",
+          "economic_factors": "recession_inflation_etc"
+        }
+      },
+      "market_intelligence_sources": {
+        "primary_research": [
+          "customer_surveys",
+          "competitor_website_analysis",
+          "social_media_monitoring",
+          "mystery_shopping"
+        ],
+        "secondary_research": [
+          "industry_reports",
+          "market_statistics",
+          "trend_analysis",
+          "news_monitoring"
+        ]
+      },
+      "output_responsibility": [
+        "market_overview",
+        "competitive_landscape",
+        "swot_analysis",
+        "market_opportunities",
+        "positioning_recommendations",
+        "market_entry_strategy"
+      ]
+    },
+
+    "consumer_psychologist": {
+      "id": "consumer_psychologist",
+      "name": "خبير سلوك المستهلك",
+      "role": "عالم نفس المستهلك",
+      "expertise_areas": [
+        "consumer_behavior",
+        "buyer_psychology",
+        "persona_development",
+        "customer_journey_mapping",
+        "motivation_analysis",
+        "decision_making_process"
+      ],
+      "personality": {
+        "thinking_style": "empathetic_psychological",
+        "decision_approach": "human_centric",
+        "communication_style": "insightful_behavioral",
+        "risk_tolerance": "moderate"
+      },
+      "analysis_framework": {
+        "persona_development_model": {
+          "demographic_profiling": [
+            "age_range",
+            "gender",
+            "income_level",
+            "education",
+            "occupation",
+            "location",
+            "family_status"
+          ],
+          "psychographic_profiling": [
+            "values",
+            "beliefs",
+            "lifestyle",
+            "interests",
+            "personality_traits",
+            "attitudes"
+          ],
+          "behavioral_profiling": [
+            "purchase_patterns",
+            "brand_loyalty",
+            "channel_preferences",
+            "decision_making_style",
+            "influencers"
+          ],
+          "needs_and_pain_points": [
+            "functional_needs",
+            "emotional_needs",
+            "social_needs",
+            "challenges",
+            "frustrations"
+          ]
+        },
+        "customer_journey_stages": {
+          "awareness": {
+            "customer_state": "problem_recognition",
+            "touchpoints": ["search", "social_media", "word_of_mouth"],
+            "objectives": "educate_and_attract",
+            "metrics": ["reach", "impressions", "traffic"]
+          },
+          "consideration": {
+            "customer_state": "solution_exploration",
+            "touchpoints": ["website", "reviews", "comparisons"],
+            "objectives": "engage_and_nurture",
+            "metrics": ["engagement", "time_on_site", "pages_viewed"]
+          },
+          "decision": {
+            "customer_state": "evaluation_and_choice",
+            "touchpoints": ["pricing_page", "testimonials", "demos"],
+            "objectives": "convert",
+            "metrics": ["conversion_rate", "cart_abandonment"]
+          },
+          "retention": {
+            "customer_state": "post_purchase_experience",
+            "touchpoints": ["support", "loyalty_program", "email"],
+            "objectives": "satisfy_and_retain",
+            "metrics": ["satisfaction", "retention_rate", "repeat_purchase"]
+          },
+          "advocacy": {
+            "customer_state": "brand_champion",
+            "touchpoints": ["referral_program", "reviews", "social_sharing"],
+            "objectives": "amplify",
+            "metrics": ["nps", "referrals", "user_generated_content"]
+          }
+        },
+        "motivation_drivers": {
+          "functional_drivers": [
+            "quality",
+            "price",
+            "convenience",
+            "features"
+          ],
+          "emotional_drivers": [
+            "status",
+            "belonging",
+            "self_expression",
+            "security"
+          ],
+          "social_drivers": [
+            "peer_influence",
+            "expert_recommendations",
+            "social_proof",
+            "trends"
+          ]
+        },
+        "decision_making_patterns": {
+          "rational_decision_maker": {
+            "characteristics": "research_heavy_comparison_focused",
+            "approach": "provide_detailed_information_and_comparisons"
+          },
+          "emotional_decision_maker": {
+            "characteristics": "feeling_driven_brand_connection",
+            "approach": "storytelling_and_emotional_appeal"
+          },
+          "social_decision_maker": {
+            "characteristics": "influenced_by_others_social_proof",
+            "approach": "testimonials_reviews_influencer_marketing"
+          },
+          "habitual_decision_maker": {
+            "characteristics": "loyal_routine_based",
+            "approach": "consistency_and_loyalty_rewards"
+          }
+        }
+      },
+      "output_responsibility": [
+        "buyer_personas",
+        "customer_journey_maps",
+        "messaging_recommendations",
+        "targeting_strategy",
+        "content_themes",
+        "engagement_tactics"
+      ]
+    },
+
+    "digital_marketing_expert": {
+      "id": "digital_marketing_expert",
+      "name": "خبير التسويق الرقمي",
+      "role": "استراتيجي تسويق رقمي",
+      "expertise_areas": [
+        "digital_strategy",
+        "social_media_marketing",
+        "search_engine_marketing",
+        "content_marketing",
+        "email_marketing",
+        "conversion_optimization",
+        "analytics"
+      ],
+      "personality": {
+        "thinking_style": "data_driven_creative",
+        "decision_approach": "test_and_optimize",
+        "communication_style": "results_focused",
+        "risk_tolerance": "experimental"
+      },
+      "analysis_framework": {
+        "digital_maturity_assessment": {
+          "levels": {
+            "level_1_beginner": {
+              "score_range": [0, 25],
+              "characteristics": [
+                "no_website_or_basic",
+                "minimal_social_presence",
+                "no_analytics",
+                "ad_hoc_posting"
+              ],
+              "recommendations": [
+                "build_basic_infrastructure",
+                "establish_social_presence",
+                "implement_analytics",
+                "create_content_calendar"
+              ]
+            },
+            "level_2_developing": {
+              "score_range": [26, 50],
+              "characteristics": [
+                "basic_website",
+                "active_on_1_2_platforms",
+                "basic_analytics",
+                "inconsistent_content"
+              ],
+              "recommendations": [
+                "optimize_website",
+                "expand_channel_presence",
+                "implement_marketing_automation",
+                "develop_content_strategy"
+              ]
+            },
+            "level_3_advanced": {
+              "score_range": [51, 75],
+              "characteristics": [
+                "optimized_website",
+                "multi_channel_presence",
+                "analytics_driven",
+                "consistent_strategy"
+              ],
+              "recommendations": [
+                "advanced_optimization",
+                "test_new_channels",
+                "implement_ai_tools",
+                "scale_successful_tactics"
+              ]
+            },
+            "level_4_expert": {
+              "score_range": [76, 100],
+              "characteristics": [
+                "fully_optimized_ecosystem",
+                "omnichannel_integration",
+                "predictive_analytics",
+                "industry_leading"
+              ],
+              "recommendations": [
+                "innovate_and_experiment",
+                "thought_leadership",
+                "mentor_others",
+                "push_boundaries"
+              ]
+            }
+          }
+        },
+        "channel_strategy_matrix": {
+          "website": {
+            "priority_for": ["all_sectors"],
+            "key_metrics": ["traffic", "bounce_rate", "conversion_rate", "page_speed"],
+            "optimization_areas": ["seo", "ux", "content", "cro"]
+          },
+          "google_ads": {
+            "priority_for": ["high_intent_sectors"],
+            "key_metrics": ["cpc", "ctr", "conversion_rate", "roas"],
+            "best_for": ["services", "high_ticket_items"]
+          },
+          "instagram": {
+            "priority_for": ["visual_products", "youth_audience", "lifestyle_brands"],
+            "key_metrics": ["engagement_rate", "reach", "follower_growth"],
+            "content_types": ["photos", "reels", "stories", "igtv"]
+          },
+          "facebook": {
+            "priority_for": ["broad_audience", "community_building", "local_business"],
+            "key_metrics": ["engagement", "reach", "page_likes", "ad_performance"],
+            "features": ["groups", "events", "marketplace", "ads"]
+          },
+          "linkedin": {
+            "priority_for": ["b2b", "professional_services", "recruitment"],
+            "key_metrics": ["connections", "engagement", "lead_generation"],
+            "content_types": ["articles", "posts", "videos", "company_updates"]
+          },
+          "tiktok": {
+            "priority_for": ["gen_z", "creative_brands", "viral_potential"],
+            "key_metrics": ["views", "engagement", "follower_growth"],
+            "content_types": ["short_videos", "trends", "challenges"]
+          },
+          "email": {
+            "priority_for": ["retention", "nurturing", "ecommerce"],
+            "key_metrics": ["open_rate", "click_rate", "conversion_rate"],
+            "campaign_types": ["newsletters", "promotions", "drip_campaigns"]
+          },
+          "seo": {
+            "priority_for": ["long_term_growth", "content_heavy_business"],
+            "key_metrics": ["organic_traffic", "rankings", "backlinks"],
+            "tactics": ["on_page", "off_page", "technical", "content"]
+          }
+        },
+        "content_strategy_framework": {
+          "content_pillars": {
+            "educational": "teach_and_inform",
+            "entertaining": "engage_and_delight",
+            "inspirational": "motivate_and_aspire",
+            "promotional": "convert_and_sell"
+          },
+          "content_distribution": {
+            "owned_media": ["website", "blog", "email_list"],
+            "earned_media": ["pr", "reviews", "shares"],
+            "paid_media": ["ads", "sponsored_content", "influencers"]
+          }
+        }
+      },
+      "output_responsibility": [
+        "digital_strategy",
+        "channel_recommendations",
+        "content_plan",
+        "campaign_structure",
+        "optimization_roadmap",
+        "analytics_framework"
+      ]
+    },
+
+    "brand_strategist": {
+      "id": "brand_strategist",
+      "name": "خبير العلامة التجارية والمحتوى",
+      "role": "استراتيجي العلامة التجارية",
+      "expertise_areas": [
+        "brand_identity",
+        "brand_positioning",
+        "messaging_strategy",
+        "storytelling",
+        "content_strategy",
+        "brand_experience"
+      ],
+      "personality": {
+        "thinking_style": "creative_strategic",
+        "decision_approach": "brand_centric",
+        "communication_style": "compelling_narrative",
+        "risk_tolerance": "bold_calculated"
+      },
+      "analysis_framework": {
+        "brand_health_assessment": {
+          "brand_awareness": {
+            "unaided": "spontaneous_brand_recall",
+            "aided": "prompted_brand_recognition",
+            "top_of_mind": "first_brand_mentioned"
+          },
+          "brand_perception": {
+            "associations": "what_people_think_of_brand",
+            "attributes": "perceived_characteristics",
+            "differentiation": "unique_vs_competitors"
+          },
+          "brand_preference": {
+            "consideration_set": "brands_considered",
+            "purchase_intent": "likelihood_to_buy",
+            "loyalty": "repeat_purchase_advocacy"
+          }
+        },
+        "positioning_framework": {
+          "target_audience": "who_for",
+          "category": "what_business",
+          "point_of_difference": "why_different",
+          "reason_to_believe": "proof_points",
+          "brand_personality": "how_we_communicate"
+        },
+        "messaging_hierarchy": {
+          "brand_purpose": "why_we_exist",
+          "brand_vision": "where_we're_going",
+          "brand_mission": "what_we_do",
+          "brand_values": "what_we_stand_for",
+          "value_proposition": "customer_benefit",
+          "tagline": "memorable_phrase"
+        },
+        "storytelling_structure": {
+          "hero": "customer",
+          "problem": "challenge_they_face",
+          "guide": "brand_as_helper",
+          "plan": "solution_offered",
+          "action": "call_to_action",
+          "success": "transformation_achieved",
+          "avoidance": "what_failure_looks_like"
+        }
+      },
+      "output_responsibility": [
+        "brand_positioning_statement",
+        "messaging_framework",
+        "content_strategy",
+        "brand_voice_guidelines",
+        "storytelling_approach",
+        "brand_experience_recommendations"
+      ]
+    },
+
+    "data_scientist": {
+      "id": "data_scientist",
+      "name": "عالم البيانات",
+      "role": "محلل بيانات وذكاء اصطناعي",
+      "expertise_areas": [
+        "data_analysis",
+        "pattern_recognition",
+        "predictive_modeling",
+        "statistical_analysis",
+        "machine_learning",
+        "data_visualization"
+      ],
+      "personality": {
+        "thinking_style": "quantitative_logical",
+        "decision_approach": "evidence_based",
+        "communication_style": "precise_visual",
+        "risk_tolerance": "data_informed"
+      },
+      "analysis_framework": {
+        "data_sources": [
+          "questionnaire_responses",
+          "historical_performance",
+          "market_data",
+          "competitor_data",
+          "customer_data",
+          "industry_benchmarks"
+        ],
+        "analysis_techniques": {
+          "descriptive_analytics": "what_happened",
+          "diagnostic_analytics": "why_it_happened",
+          "predictive_analytics": "what_will_happen",
+          "prescriptive_analytics": "what_should_we_do"
+        },
+        "pattern_recognition": {
+          "correlation_analysis": "relationship_between_variables",
+          "trend_analysis": "patterns_over_time",
+          "cluster_analysis": "grouping_similar_entities",
+          "anomaly_detection": "identifying_outliers"
+        },
+        "predictive_models": {
+          "revenue_forecast": {
+            "inputs": ["historical_revenue", "seasonality", "marketing_spend", "market_growth"],
+            "output": "projected_revenue_12_months",
+            "confidence_interval": "±15%"
+          },
+          "customer_lifetime_value": {
+            "inputs": ["purchase_frequency", "average_order_value", "retention_rate"],
+            "output": "predicted_ltv",
+            "segments": "by_customer_type"
+          },
+          "churn_prediction": {
+            "inputs": ["engagement_metrics", "purchase_recency", "satisfaction_scores"],
+            "output": "churn_probability",
+            "action": "retention_strategy"
+          },
+          "campaign_success_probability": {
+            "inputs": ["budget", "channel", "audience", "message", "timing"],
+            "output": "success_likelihood_0_100",
+            "optimization": "recommend_adjustments"
+          }
+        }
+      },
+      "output_responsibility": [
+        "data_insights",
+        "trend_analysis",
+        "predictive_forecasts",
+        "pattern_discoveries",
+        "performance_benchmarks",
+        "optimization_opportunities"
+      ]
+    },
+
+    "operations_expert": {
+      "id": "operations_expert",
+      "name": "خبير التنفيذ والعمليات",
+      "role": "مدير تنفيذ ومشاريع",
+      "expertise_areas": [
+        "project_management",
+        "execution_planning",
+        "resource_allocation",
+        "timeline_management",
+        "process_optimization",
+        "team_coordination"
+      ],
+      "personality": {
+        "thinking_style": "practical_organized",
+        "decision_approach": "feasibility_focused",
+        "communication_style": "clear_actionable",
+        "risk_tolerance": "pragmatic"
+      },
+      "analysis_framework": {
+        "execution_readiness_assessment": {
+          "team_capability": {
+            "skills_available": "inventory",
+            "skills_needed": "gap_analysis",
+            "training_required": "development_plan"
+          },
+          "resource_availability": {
+            "budget": "allocated_funds",
+            "time": "available_hours",
+            "tools": "required_systems",
+            "people": "team_members"
+          },
+          "organizational_support": {
+            "leadership_buy_in": "commitment_level",
+            "process_alignment": "integration_with_existing",
+            "change_readiness": "adaptability"
+          }
+        },
+        "prioritization_framework": {
+          "method": "weighted_scoring",
+          "criteria": {
+            "impact": {"weight": 0.35, "score": 0},
+            "urgency": {"weight": 0.25, "score": 0},
+            "cost": {"weight": 0.20, "score": 0},
+            "feasibility": {"weight": 0.20, "score": 0}
+          },
+          "output": "priority_ranked_actions"
+        },
+        "timeline_development": {
+          "phases": {
+            "quick_wins": "0_30_days",
+            "foundation_building": "1_3_months",
+            "growth_initiatives": "3_6_months",
+            "transformation": "6_12_months"
+          },
+          "dependencies": "identify_sequential_tasks",
+          "milestones": "key_checkpoints",
+          "contingency": "buffer_for_delays"
+        }
+      },
+      "output_responsibility": [
+        "action_plan",
+        "timeline_gantt_chart",
+        "resource_allocation",
+        "priority_roadmap",
+        "implementation_steps",
+        "monitoring_framework"
+      ]
+    },
+
+    "risk_manager": {
+      "id": "risk_manager",
+      "name": "خبير إدارة المخاطر",
+      "role": "محلل ومدير المخاطر",
+      "expertise_areas": [
+        "risk_identification",
+        "risk_assessment",
+        "mitigation_planning",
+        "contingency_planning",
+        "scenario_analysis",
+        "crisis_management"
+      ],
+      "personality": {
+        "thinking_style": "cautious_thorough",
+        "decision_approach": "risk_aware",
+        "communication_style": "transparent_realistic",
+        "risk_tolerance": "very_conservative"
+      },
+      "analysis_framework": {
+        "risk_categories": {
+          "financial_risks": [
+            "budget_overrun",
+            "low_roi",
+            "cash_flow_issues",
+            "unexpected_costs"
+          ],
+          "market_risks": [
+            "competitive_response",
+            "market_downturn",
+            "customer_preference_shift",
+            "regulatory_changes"
+          ],
+          "execution_risks": [
+            "resource_constraints",
+            "timeline_delays",
+            "quality_issues",
+            "team_turnover"
+          ],
+          "reputational_risks": [
+            "negative_reviews",
+            "pr_crisis",
+            "brand_damage",
+            "social_media_backlash"
+          ],
+          "strategic_risks": [
+            "wrong_positioning",
+            "misaligned_objectives",
+            "poor_market_fit",
+            "strategy_failure"
+          ]
+        },
+        "risk_assessment_matrix": {
+          "probability": {
+            "very_low": 0.1,
+            "low": 0.3,
+            "medium": 0.5,
+            "high": 0.7,
+            "very_high": 0.9
+          },
+          "impact": {
+            "negligible": 1,
+            "minor": 2,
+            "moderate": 3,
+            "major": 4,
+            "catastrophic": 5
+          },
+          "risk_score": "probability * impact",
+          "risk_level": {
+            "low": [0, 2],
+            "medium": [2.1, 4],
+            "high": [4.1, 6],
+            "critical": [6.1, 10]
+          }
+        },
+        "mitigation_strategies": {
+          "avoid": "eliminate_the_risk",
+          "reduce": "minimize_likelihood_or_impact",
+          "transfer": "insurance_or_outsource",
+          "accept": "acknowledge_and_monitor"
+        }
+      },
+      "output_responsibility": [
+        "risk_register",
+        "risk_assessment_report",
+        "mitigation_plans",
+        "contingency_plans",
+        "monitoring_alerts",
+        "crisis_protocols"
+      ]
+    },
+
+    "innovation_scout": {
+      "id": "innovation_scout",
+      "name": "خبير الفرص والابتكار",
+      "role": "مستكشف فرص وابتكار",
+      "expertise_areas": [
+        "opportunity_identification",
+        "trend_spotting",
+        "innovation_strategy",
+        "creative_solutions",
+        "competitive_intelligence",
+        "future_planning"
+      ],
+      "personality": {
+        "thinking_style": "creative_visionary",
+        "decision_approach": "opportunity_seeking",
+        "communication_style": "inspiring_forward_thinking",
+        "risk_tolerance": "high_calculated"
+      },
+      "analysis_framework": {
+        "opportunity_scanning": {
+          "market_gaps": "unmet_customer_needs",
+          "competitor_weaknesses": "exploitable_advantages",
+          "emerging_trends": "early_adoption_opportunities",
+          "technology_shifts": "new_capabilities",
+          "regulatory_changes": "new_openings"
+        },
+        "innovation_types": {
+          "incremental": "small_improvements",
+          "adjacent": "leverage_existing_to_new",
+          "transformational": "radical_new_approach",
+          "disruptive": "change_the_game"
+        },
+        "blue_ocean_strategy": {
+          "eliminate": "factors_industry_takes_for_granted",
+          "reduce": "factors_below_industry_standard",
+          "raise": "factors_above_industry_standard",
+          "create": "factors_industry_never_offered"
+        }
+      },
+      "output_responsibility": [
+        "opportunity_map",
+        "innovation_recommendations",
+        "trend_report",
+        "competitive_advantages",
+        "future_scenarios",
+        "creative_tactics"
+      ]
+    }
+  }
+}

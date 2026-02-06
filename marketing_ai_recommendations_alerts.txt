@@ -1,0 +1,679 @@
+{
+  "recommendation_engine": {
+    "name": "محرك التوصيات الذكي",
+    "description": "يولد توصيات مخصصة بناءً على التحليل الشامل",
+    
+    "recommendation_layers": {
+      "layer_1_strategic": {
+        "type": "high_level_direction",
+        "time_horizon": "6_12_months",
+        "responsible_expert": "chief_strategist",
+        
+        "strategy_selection_matrix": {
+          "emergency_plan": {
+            "triggers": [
+              "revenue_declining_3_months",
+              "cash_flow_critical",
+              "market_share_dropping_rapidly",
+              "risk_score > 8"
+            ],
+            "duration": "30_days",
+            "focus": "immediate_survival",
+            "budget_approach": "minimal_high_impact",
+            "success_metric": "stop_the_bleeding"
+          },
+          
+          "treatment_plan": {
+            "triggers": [
+              "performance_below_benchmark",
+              "digital_maturity < 40",
+              "no_clear_strategy",
+              "inconsistent_execution"
+            ],
+            "duration": "3_months",
+            "focus": "build_foundation",
+            "budget_approach": "moderate_systematic",
+            "success_metric": "establish_baseline"
+          },
+          
+          "growth_plan": {
+            "triggers": [
+              "revenue_growing",
+              "good_fundamentals",
+              "market_opportunity_high",
+              "resources_available"
+            ],
+            "duration": "6_months",
+            "focus": "scale_and_expand",
+            "budget_approach": "aggressive_calculated",
+            "success_metric": "accelerate_growth"
+          },
+          
+          "transformation_plan": {
+            "triggers": [
+              "mature_business",
+              "market_position_strong",
+              "ready_for_innovation",
+              "long_term_vision"
+            ],
+            "duration": "12_months",
+            "focus": "reinvent_and_lead",
+            "budget_approach": "substantial_strategic",
+            "success_metric": "market_leadership"
+          }
+        },
+        
+        "positioning_recommendations": {
+          "cost_leader": {
+            "when": "price_sensitive_market AND operational_efficiency_high",
+            "messaging": "best_value_for_money",
+            "risks": "race_to_bottom"
+          },
+          "differentiator": {
+            "when": "unique_features AND willing_to_pay_premium",
+            "messaging": "unique_benefits",
+            "risks": "easy_to_copy"
+          },
+          "niche_specialist": {
+            "when": "specific_segment AND deep_expertise",
+            "messaging": "expert_for_specific_needs",
+            "risks": "limited_market_size"
+          },
+          "customer_intimacy": {
+            "when": "service_based AND relationship_driven",
+            "messaging": "personalized_solutions",
+            "risks": "hard_to_scale"
+          }
+        }
+      },
+      
+      "layer_2_tactical": {
+        "type": "medium_level_actions",
+        "time_horizon": "1_6_months",
+        "responsible_experts": ["digital_marketing_expert", "brand_strategist"],
+        
+        "channel_selection_framework": {
+          "decision_criteria": {
+            "target_audience_presence": 0.30,
+            "cost_effectiveness": 0.25,
+            "competitive_advantage_potential": 0.20,
+            "resource_availability": 0.15,
+            "speed_to_results": 0.10
+          },
+          
+          "channel_recommendations_by_scenario": {
+            "low_budget_high_urgency": {
+              "primary": ["organic_social", "google_my_business", "email_to_existing"],
+              "secondary": ["content_marketing", "partnerships"],
+              "avoid": ["tv", "radio", "expensive_influencers"]
+            },
+            
+            "medium_budget_brand_building": {
+              "primary": ["content_marketing", "social_media_ads", "influencer_partnerships"],
+              "secondary": ["seo", "pr", "events"],
+              "avoid": ["mass_advertising"]
+            },
+            
+            "high_budget_rapid_growth": {
+              "primary": ["paid_search", "social_media_ads", "retargeting"],
+              "secondary": ["influencer_marketing", "partnerships", "content"],
+              "test": ["new_platforms", "innovative_formats"]
+            },
+            
+            "b2b_professional": {
+              "primary": ["linkedin", "content_marketing", "webinars"],
+              "secondary": ["email_marketing", "industry_events", "partnerships"],
+              "avoid": ["tiktok", "snapchat"]
+            },
+            
+            "b2c_visual_products": {
+              "primary": ["instagram", "pinterest", "tiktok"],
+              "secondary": ["facebook", "influencers", "user_generated_content"],
+              "test": ["youtube", "snapchat"]
+            }
+          }
+        },
+        
+        "campaign_recommendations": {
+          "awareness_campaigns": {
+            "when": "brand_awareness < 3",
+            "objectives": ["reach", "impressions", "brand_recall"],
+            "tactics": [
+              "broad_audience_targeting",
+              "engaging_content",
+              "influencer_partnerships",
+              "pr_and_media"
+            ],
+            "kpis": ["reach", "impressions", "brand_lift", "share_of_voice"]
+          },
+          
+          "consideration_campaigns": {
+            "when": "awareness_ok_but_low_engagement",
+            "objectives": ["engagement", "education", "preference_building"],
+            "tactics": [
+              "educational_content",
+              "comparison_guides",
+              "testimonials",
+              "retargeting"
+            ],
+            "kpis": ["engagement_rate", "time_on_site", "video_views", "downloads"]
+          },
+          
+          "conversion_campaigns": {
+            "when": "high_traffic_low_conversion",
+            "objectives": ["sales", "leads", "signups"],
+            "tactics": [
+              "retargeting",
+              "limited_time_offers",
+              "social_proof",
+              "urgency_scarcity"
+            ],
+            "kpis": ["conversion_rate", "cac", "roas", "revenue"]
+          },
+          
+          "retention_campaigns": {
+            "when": "high_churn_or_one_time_buyers",
+            "objectives": ["repeat_purchase", "loyalty", "lifetime_value"],
+            "tactics": [
+              "email_nurture",
+              "loyalty_program",
+              "exclusive_offers",
+              "community_building"
+            ],
+            "kpis": ["retention_rate", "repeat_purchase_rate", "ltv", "churn"]
+          }
+        },
+        
+        "content_strategy_recommendations": {
+          "content_pillars": {
+            "educational": {
+              "percentage": 40,
+              "formats": ["how_to_guides", "tutorials", "explainers", "tips"],
+              "goal": "build_authority_and_trust"
+            },
+            "entertaining": {
+              "percentage": 30,
+              "formats": ["behind_scenes", "stories", "humor", "trends"],
+              "goal": "engagement_and_virality"
+            },
+            "inspirational": {
+              "percentage": 20,
+              "formats": ["success_stories", "transformations", "quotes", "aspirational"],
+              "goal": "emotional_connection"
+            },
+            "promotional": {
+              "percentage": 10,
+              "formats": ["product_features", "offers", "announcements", "testimonials"],
+              "goal": "direct_conversion"
+            }
+          },
+          
+          "posting_frequency_by_platform": {
+            "instagram": {
+              "feed_posts": "3_5_per_week",
+              "stories": "1_3_per_day",
+              "reels": "2_3_per_week"
+            },
+            "facebook": {
+              "posts": "3_7_per_week",
+              "stories": "1_2_per_day"
+            },
+            "linkedin": {
+              "posts": "3_5_per_week",
+              "articles": "1_2_per_month"
+            },
+            "tiktok": {
+              "videos": "3_7_per_week"
+            },
+            "twitter": {
+              "tweets": "3_10_per_day"
+            }
+          }
+        }
+      },
+      
+      "layer_3_execution": {
+        "type": "detailed_action_items",
+        "time_horizon": "immediate_to_3_months",
+        "responsible_expert": "operations_expert",
+        
+        "action_plan_structure": {
+          "quick_wins_0_30_days": {
+            "criteria": "high_impact_low_effort",
+            "examples": [
+              {
+                "action": "optimize_google_my_business",
+                "impact": "high",
+                "effort": "low",
+                "cost": "free",
+                "timeline": "2_hours",
+                "expected_result": "improved_local_visibility"
+              },
+              {
+                "action": "create_instagram_business_account",
+                "impact": "medium",
+                "effort": "low",
+                "cost": "free",
+                "timeline": "1_day",
+                "expected_result": "new_channel_established"
+              },
+              {
+                "action": "email_existing_customers_with_offer",
+                "impact": "high",
+                "effort": "low",
+                "cost": "low",
+                "timeline": "3_days",
+                "expected_result": "immediate_revenue_boost"
+              }
+            ]
+          },
+          
+          "foundation_building_1_3_months": {
+            "criteria": "essential_for_long_term_success",
+            "examples": [
+              {
+                "action": "develop_brand_identity",
+                "impact": "high",
+                "effort": "medium",
+                "cost": "medium",
+                "timeline": "3_4_weeks",
+                "expected_result": "consistent_professional_brand"
+              },
+              {
+                "action": "build_content_calendar_3_months",
+                "impact": "high",
+                "effort": "medium",
+                "cost": "low",
+                "timeline": "1_week",
+                "expected_result": "consistent_content_flow"
+              },
+              {
+                "action": "implement_analytics_tracking",
+                "impact": "high",
+                "effort": "low",
+                "cost": "free",
+                "timeline": "1_day",
+                "expected_result": "data_driven_decisions"
+              }
+            ]
+          },
+          
+          "growth_initiatives_3_6_months": {
+            "criteria": "scale_and_expand",
+            "examples": [
+              {
+                "action": "launch_paid_advertising_campaigns",
+                "impact": "high",
+                "effort": "high",
+                "cost": "high",
+                "timeline": "ongoing",
+                "expected_result": "increased_leads_sales"
+              },
+              {
+                "action": "develop_influencer_partnerships",
+                "impact": "medium",
+                "effort": "medium",
+                "cost": "medium",
+                "timeline": "1_2_months",
+                "expected_result": "expanded_reach"
+              }
+            ]
+          }
+        },
+        
+        "prioritization_framework": {
+          "method": "RICE_scoring",
+          "formula": "(Reach * Impact * Confidence) / Effort",
+          "scoring_guide": {
+            "reach": {
+              "scale": "1_10",
+              "definition": "how_many_people_affected"
+            },
+            "impact": {
+              "scale": "1_10",
+              "definition": "degree_of_improvement"
+            },
+            "confidence": {
+              "scale": "0_1",
+              "definition": "certainty_of_estimates"
+            },
+            "effort": {
+              "scale": "1_10",
+              "definition": "person_months_required"
+            }
+          }
+        }
+      }
+    },
+    
+    "personalization_engine": {
+      "by_sector": {
+        "enabled": true,
+        "sector_specific_tactics": {
+          "education": {
+            "focus": ["parent_testimonials", "student_success_stories", "open_days"],
+            "channels": ["facebook_parents_groups", "google_search", "local_events"],
+            "messaging": ["quality_education", "safe_environment", "proven_results"]
+          },
+          "healthcare": {
+            "focus": ["before_after", "expert_credentials", "technology"],
+            "channels": ["google_search", "instagram", "health_portals"],
+            "messaging": ["expertise", "care", "results", "modern_facilities"]
+          },
+          "fnb": {
+            "focus": ["food_photography", "experience", "reviews"],
+            "channels": ["instagram", "google_maps", "food_delivery_apps"],
+            "messaging": ["taste", "quality", "experience", "value"]
+          }
+        }
+      },
+      
+      "by_budget": {
+        "enabled": true,
+        "budget_tiers": {
+          "micro": {
+            "range": "0_5000_monthly",
+            "focus": "organic_and_free",
+            "channels": ["organic_social", "gmb", "email", "content"],
+            "avoid": ["expensive_ads", "agencies", "influencers"]
+          },
+          "small": {
+            "range": "5000_20000_monthly",
+            "focus": "smart_paid_plus_organic",
+            "channels": ["social_ads", "google_ads", "content", "micro_influencers"],
+            "test_budget": "20_percent"
+          },
+          "medium": {
+            "range": "20000_100000_monthly",
+            "focus": "multi_channel_integrated",
+            "channels": ["full_digital_mix", "influencers", "pr", "events"],
+            "test_budget": "15_percent"
+          },
+          "large": {
+            "range": "100000_plus_monthly",
+            "focus": "comprehensive_campaigns",
+            "channels": ["all_channels", "agencies", "major_influencers"],
+            "innovation_budget": "10_percent"
+          }
+        }
+      },
+      
+      "by_urgency": {
+        "critical": {
+          "timeline": "0_30_days",
+          "focus": "immediate_results",
+          "tactics": ["flash_sales", "retargeting", "email_blasts", "paid_search"],
+          "avoid": ["seo", "brand_building", "long_term_content"]
+        },
+        "high": {
+          "timeline": "1_3_months",
+          "focus": "quick_wins_plus_foundation",
+          "tactics": ["paid_ads", "promotions", "partnerships", "basics_setup"],
+          "balance": "70_short_term_30_long_term"
+        },
+        "medium": {
+          "timeline": "3_6_months",
+          "focus": "sustainable_growth",
+          "tactics": ["balanced_mix", "content", "seo", "campaigns"],
+          "balance": "50_short_term_50_long_term"
+        },
+        "low": {
+          "timeline": "6_12_months",
+          "focus": "strategic_positioning",
+          "tactics": ["brand_building", "seo", "thought_leadership", "innovation"],
+          "balance": "30_short_term_70_long_term"
+        }
+      }
+    },
+    
+    "budget_allocation_optimizer": {
+      "optimization_method": "performance_based_allocation",
+      
+      "initial_allocation_templates": {
+        "emergency_survival": {
+          "immediate_revenue_generation": 0.60,
+          "customer_retention": 0.25,
+          "essential_presence": 0.10,
+          "buffer": 0.05
+        },
+        
+        "foundation_building": {
+          "brand_and_website": 0.30,
+          "content_creation": 0.25,
+          "paid_acquisition": 0.30,
+          "tools_and_analytics": 0.10,
+          "buffer": 0.05
+        },
+        
+        "growth_acceleration": {
+          "paid_advertising": 0.45,
+          "content_and_creative": 0.20,
+          "influencer_partnerships": 0.15,
+          "tools_and_tech": 0.10,
+          "testing_and_innovation": 0.10
+        },
+        
+        "market_leadership": {
+          "integrated_campaigns": 0.35,
+          "brand_building": 0.25,
+          "innovation_and_r&d": 0.15,
+          "partnerships_and_events": 0.15,
+          "measurement_and_optimization": 0.10
+        }
+      },
+      
+      "reallocation_rules": {
+        "based_on_performance": {
+          "if_roas > 5": "increase_budget_50_percent",
+          "if_roas_3_5": "increase_budget_25_percent",
+          "if_roas_2_3": "maintain_budget",
+          "if_roas_1_2": "decrease_budget_25_percent_optimize",
+          "if_roas < 1": "pause_and_reevaluate"
+        },
+        
+        "seasonal_adjustments": {
+          "high_season": "increase_30_50_percent",
+          "shoulder_season": "maintain_baseline",
+          "low_season": "reduce_but_maintain_presence"
+        }
+      }
+    }
+  },
+
+  "alert_engine": {
+    "name": "محرك التنبيهات والتحذيرات",
+    "description": "ينبه لمشاكل ويكتشف فرص في الوقت الحقيقي",
+    
+    "alert_configuration": {
+      "real_time_monitoring": true,
+      "alert_channels": ["in_app", "email", "dashboard"],
+      "severity_levels": ["info", "warning", "high", "critical"],
+      "auto_escalation": true
+    },
+    
+    "alert_categories": {
+      "critical_alerts": {
+        "severity": 10,
+        "color": "red",
+        "icon": "⚠️",
+        "requires_immediate_action": true,
+        "auto_notify": ["user", "assigned_expert"],
+        
+        "alert_types": [
+          {
+            "id": "ALERT_CRIT_001",
+            "name": "خطر على استمرارية العمل",
+            "trigger": "revenue_declining_3_consecutive_months AND cash_flow_negative",
+            "message": "تحذير حرج: انخفاض مستمر في الإيرادات مع تدفق نقدي سلبي",
+            "recommendation": "تفعيل خطة الطوارئ فوراً",
+            "assigned_expert": "chief_strategist",
+            "escalate_after": "24_hours"
+          },
+          {
+            "id": "ALERT_CRIT_002",
+            "name": "ميزانية غير مستدامة",
+            "trigger": "marketing_budget > revenue * 0.50",
+            "message": "الميزانية التسويقية تتجاوز 50% من الإيرادات - غير قابل للاستمرار",
+            "recommendation": "تخفيض الإنفاق أو زيادة الإيرادات بشكل عاجل",
+            "assigned_expert": "financial_analyst"
+          },
+          {
+            "id": "ALERT_CRIT_003",
+            "name": "تكلفة اكتساب أعلى من قيمة العميل",
+            "trigger": "cac > ltv * 1.5",
+            "message": "تكلفة اكتساب العميل أعلى بكثير من قيمته - نموذج خاسر",
+            "recommendation": "إيقاف الحملات غير المربحة وإعادة التقييم",
+            "assigned_expert": "financial_analyst"
+          }
+        ]
+      },
+      
+      "high_priority_alerts": {
+        "severity": 7,
+        "color": "orange",
+        "icon": "⚡",
+        "requires_action": true,
+        "auto_notify": ["user"],
+        
+        "alert_types": [
+          {
+            "id": "ALERT_HIGH_001",
+            "name": "منافس جديد قوي",
+            "trigger": "new_competitor_detected AND competitor_strength > 8",
+            "message": "دخول منافس قوي للسوق - يتطلب استجابة",
+            "recommendation": "تحليل المنافس وتطوير استراتيجية دفاعية",
+            "assigned_expert": "market_analyst"
+          },
+          {
+            "id": "ALERT_HIGH_002",
+            "name": "انخفاض معدل التحويل",
+            "trigger": "conversion_rate_drop > 30_percent_in_month",
+            "message": "انخفاض حاد في معدل التحويل",
+            "recommendation": "مراجعة رحلة العميل والموقع الإلكتروني",
+            "assigned_expert": "digital_marketing_expert"
+          },
+          {
+            "id": "ALERT_HIGH_003",
+            "name": "ارتفاع معدل الانقطاع",
+            "trigger": "churn_rate > industry_benchmark * 1.5",
+            "message": "معدل فقدان العملاء أعلى من المعدل الطبيعي",
+            "recommendation": "برنامج استبقاء عاجل",
+            "assigned_expert": "consumer_psychologist"
+          }
+        ]
+      },
+      
+      "warning_alerts": {
+        "severity": 4,
+        "color": "yellow",
+        "icon": "⚠️",
+        "for_awareness": true,
+        
+        "alert_types": [
+          {
+            "id": "ALERT_WARN_001",
+            "name": "أداء حملة ضعيف",
+            "trigger": "campaign_roas < 2 AND budget_spent > 50_percent",
+            "message": "حملة إعلانية تحقق عائد منخفض",
+            "recommendation": "تحسين أو إيقاف الحملة",
+            "assigned_expert": "digital_marketing_expert"
+          },
+          {
+            "id": "ALERT_WARN_002",
+            "name": "انخفاض التفاعل",
+            "trigger": "engagement_rate_drop > 40_percent_in_month",
+            "message": "انخفاض ملحوظ في تفاعل الجمهور",
+            "recommendation": "مراجعة استراتيجية المحتوى",
+            "assigned_expert": "brand_strategist"
+          }
+        ]
+      },
+      
+      "info_alerts": {
+        "severity": 2,
+        "color": "blue",
+        "icon": "ℹ️",
+        "for_information": true,
+        
+        "alert_types": [
+          {
+            "id": "ALERT_INFO_001",
+            "name": "فرصة موسمية قادمة",
+            "trigger": "30_days_before_seasonal_peak",
+            "message": "اقتراب موسم الذروة - وقت التحضير",
+            "recommendation": "تجهيز الحملات الموسمية",
+            "assigned_expert": "operations_expert"
+          },
+          {
+            "id": "ALERT_INFO_002",
+            "name": "اتجاه جديد مكتشف",
+            "trigger": "emerging_trend_detected_in_sector",
+            "message": "اتجاه جديد في القطاع يستحق الانتباه",
+            "recommendation": "دراسة الاتجاه والاستفادة المبكرة",
+            "assigned_expert": "innovation_scout"
+          }
+        ]
+      }
+    },
+    
+    "opportunity_alerts": {
+      "enabled": true,
+      "proactive_scanning": true,
+      
+      "opportunity_types": [
+        {
+          "id": "OPP_ALERT_001",
+          "name": "ميزانية غير مستغلة",
+          "trigger": "budget_utilized < 60_percent AND month_end_approaching",
+          "message": "لديكم ميزانية غير مستخدمة - فرصة للاستثمار",
+          "recommendation": "زيادة الإنفاق على القنوات الناجحة",
+          "potential_impact": "high"
+        },
+        {
+          "id": "OPP_ALERT_002",
+          "name": "محتوى ناجح - توسيع",
+          "trigger": "content_piece_engagement > average * 3",
+          "message": "محتوى حقق تفاعل استثنائي",
+          "recommendation": "إنشاء محتوى مشابه وترويجه بإعلانات",
+          "potential_impact": "medium"
+        },
+        {
+          "id": "OPP_ALERT_003",
+          "name": "منافس ضعيف - استغلال",
+          "trigger": "competitor_negative_reviews_spike",
+          "message": "منافس يواجه أزمة سمعة",
+          "recommendation": "حملة لجذب عملائهم",
+          "potential_impact": "high"
+        }
+      ]
+    },
+    
+    "contradiction_alerts": {
+      "auto_detect": true,
+      
+      "contradiction_patterns": [
+        {
+          "id": "CONTRA_ALERT_001",
+          "pattern": "says_growing_but_numbers_declining",
+          "message": "هناك تناقض بين تصريحك وبين الأرقام",
+          "action": "request_clarification",
+          "questions": [
+            "هل يمكنك توضيح أي جانب من العمل ينمو؟",
+            "هل هناك مقاييس أخرى تظهر النمو؟"
+          ]
+        },
+        {
+          "id": "CONTRA_ALERT_002",
+          "pattern": "high_satisfaction_high_churn",
+          "message": "تناقض: رضا عملاء عالي لكن معدل انقطاع مرتفع",
+          "action": "deep_dive_investigation",
+          "hypothesis": [
+            "ربما الرضا قياسه غير دقيق",
+            "ربما المنافسين يقدمون عروض أفضل",
+            "ربما الولاء ضعيف رغم الرضا"
+          ]
+        }
+      ]
+    }
+  }
+}

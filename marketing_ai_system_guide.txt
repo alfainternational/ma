@@ -1,0 +1,499 @@
+{
+  "system_guide": {
+    "title": "دليل نظام الذكاء الاصطناعي التسويقي الشامل",
+    "version": "1.0.0",
+    "description": "دليل كامل لفهم واستخدام نظام الذكاء الاصطناعي",
+    
+    "architecture_overview": {
+      "system_components": [
+        {
+          "component": "Expert Personas Layer",
+          "file": "marketing_ai_core_system.json",
+          "description": "10 خبراء افتراضيين بشخصيات وخبرات متخصصة",
+          "role": "التحليل المتخصص وإصدار التوصيات"
+        },
+        {
+          "component": "Inference Engines Layer",
+          "file": "marketing_ai_inference_engines.json",
+          "description": "محركات الذاكرة، العلاقات، التسجيل، والاستنتاج",
+          "role": "الربط والتحليل المنطقي والتنبؤ"
+        },
+        {
+          "component": "Recommendations & Alerts Layer",
+          "file": "marketing_ai_recommendations_alerts.json",
+          "description": "محركات التوصيات والتنبيهات الذكية",
+          "role": "توليد التوصيات وإصدار التنبيهات"
+        },
+        {
+          "component": "Questioning & Reporting Layer",
+          "file": "marketing_ai_questioning_reporting.json",
+          "description": "نظام الأسئلة الديناميكية ومحرك التقارير",
+          "role": "جمع البيانات وإنتاج التقارير"
+        },
+        {
+          "component": "Question Bank",
+          "file": "marketing_ai_question_bank.json",
+          "description": "قاعدة بيانات الأسئلة مع البيانات الوصفية الكاملة",
+          "role": "مستودع الأسئلة والقواعد"
+        }
+      ],
+      
+      "data_flow": {
+        "step_1": "المستخدم يجيب على الأسئلة",
+        "step_2": "Context Engine يحفظ ويتتبع السياق",
+        "step_3": "Relationship Engine يربط الإجابات ويكتشف الأنماط",
+        "step_4": "Scoring Engine يحسب الدرجات والمؤشرات",
+        "step_5": "Inference Engine يستنتج الحقائق ويتنبأ",
+        "step_6": "Expert Personas تحلل من زوايا متخصصة",
+        "step_7": "Recommendation Engine يولد التوصيات",
+        "step_8": "Alert Engine ينبه للمشاكل والفرص",
+        "step_9": "Reporting Engine ينتج التقارير الشاملة",
+        "step_10": "النظام يتعلم ويحسن نفسه"
+      }
+    },
+    
+    "usage_workflow": {
+      "phase_1_initialization": {
+        "description": "تهيئة النظام للعميل الجديد",
+        "steps": [
+          "إنشاء session جديدة",
+          "تحديد القطاع الأساسي",
+          "تحميل benchmarks القطاع",
+          "تفعيل الخبراء المناسبين",
+          "إعداد نظام الأسئلة"
+        ]
+      },
+      
+      "phase_2_data_collection": {
+        "description": "جمع البيانات من خلال الأسئلة الذكية",
+        "process": {
+          "adaptive_questioning": "الأسئلة تتكيف بناءً على الإجابات",
+          "skip_logic": "تخطي الأسئلة غير ذات الصلة",
+          "deep_dive": "أسئلة إضافية عند اكتشاف red flags",
+          "validation": "التحقق من الإجابات المتناقضة",
+          "clarification": "طلب توضيحات عند الحاجة"
+        }
+      },
+      
+      "phase_3_real_time_analysis": {
+        "description": "التحليل المستمر أثناء جمع البيانات",
+        "happening_live": [
+          "حساب المؤشرات",
+          "مقارنة مع Benchmarks",
+          "كشف الأنماط",
+          "رفع التنبيهات",
+          "تحديث السياق",
+          "تعديل الأسئلة القادمة"
+        ]
+      },
+      
+      "phase_4_expert_analysis": {
+        "description": "كل خبير يحلل من منظوره",
+        "expert_collaboration": {
+          "individual_analysis": "كل خبير يقوم بتحليله المستقل",
+          "cross_expert_insights": "مشاركة الرؤى بين الخبراء",
+          "consensus_building": "بناء توافق على التوصيات",
+          "disagreement_handling": "عرض وجهات النظر المختلفة",
+          "final_synthesis": "الخبير الاستراتيجي يجمع كل شيء"
+        }
+      },
+      
+      "phase_5_recommendations": {
+        "description": "توليد التوصيات المخصصة",
+        "personalization_factors": [
+          "القطاع",
+          "حجم الميزانية",
+          "مرحلة العمل",
+          "مستوى الاستعجال",
+          "النضج الرقمي",
+          "الموارد المتاحة",
+          "الأهداف المحددة"
+        ]
+      },
+      
+      "phase_6_reporting": {
+        "description": "إنتاج التقارير الشاملة",
+        "report_types_generated": [
+          "Executive Summary",
+          "Detailed Analysis",
+          "Action Plan",
+          "Risk Assessment",
+          "Opportunity Map"
+        ]
+      }
+    },
+    
+    "practical_examples": {
+      "example_1_struggling_restaurant": {
+        "scenario": "مطعم محلي يعاني من انخفاض في المبيعات",
+        
+        "key_answers": {
+          "sector": "fnb",
+          "years_in_business": 3,
+          "annual_revenue": 800000,
+          "revenue_trend": "declining",
+          "monthly_costs": 75000,
+          "marketing_budget": 5000,
+          "digital_maturity_score": 25,
+          "customer_satisfaction": 8,
+          "brand_awareness": 3
+        },
+        
+        "ai_analysis_process": {
+          "step_1_context_understanding": {
+            "business_stage": "growth",
+            "urgency_level": "high",
+            "budget_tier": "small",
+            "digital_maturity": "beginner",
+            "market_position": "follower"
+          },
+          
+          "step_2_pattern_recognition": {
+            "pattern_detected": "good_product_poor_marketing",
+            "evidence": [
+              "high_customer_satisfaction_8",
+              "low_brand_awareness_3",
+              "minimal_digital_presence_25",
+              "declining_revenue"
+            ],
+            "confidence": 0.88
+          },
+          
+          "step_3_expert_insights": {
+            "financial_analyst": {
+              "concern": "الهوامش ضيقة - التكاليف 90% من الإيرادات",
+              "recommendation": "تحسين الكفاءة التشغيلية مع زيادة المبيعات"
+            },
+            "consumer_psychologist": {
+              "insight": "العملاء الحاليون راضون جداً - فرصة للإحالات",
+              "recommendation": "برنامج إحالة قوي + طلب مراجعات"
+            },
+            "digital_marketing_expert": {
+              "gap": "تواجد رقمي شبه معدوم - تفوت فرص كبيرة",
+              "recommendation": "بناء حضور على Instagram وGoogle Maps"
+            },
+            "brand_strategist": {
+              "opportunity": "منتج جيد قصة غير معروفة",
+              "recommendation": "محتوى يبرز الجودة والتجربة"
+            }
+          },
+          
+          "step_4_strategic_decision": {
+            "chief_strategist_recommendation": "خطة معالجة 3 أشهر",
+            "rationale": "المطعم لديه أساس جيد لكن يحتاج بناء تسويقي عاجل",
+            "primary_focus": [
+              "بناء حضور رقمي أساسي",
+              "تفعيل العملاء الحاليين كسفراء",
+              "زيادة الوعي المحلي"
+            ]
+          },
+          
+          "step_5_action_plan": {
+            "quick_wins_30_days": [
+              {
+                "action": "تحسين Google My Business",
+                "cost": 0,
+                "expected_impact": "زيادة 20% في الزيارات الجديدة"
+              },
+              {
+                "action": "إطلاق برنامج إحالة",
+                "cost": 2000,
+                "expected_impact": "15-20 عميل جديد/شهر"
+              },
+              {
+                "action": "حملة تصوير احترافي للأطباق",
+                "cost": 3000,
+                "expected_impact": "محتوى لـ 3 أشهر"
+              }
+            ],
+            
+            "month_2_3": [
+              {
+                "action": "بناء حضور Instagram نشط",
+                "budget": 2000,
+                "expected_impact": "500-1000 متابع في 3 أشهر"
+              },
+              {
+                "action": "حملة إعلانات محلية صغيرة",
+                "budget": 3000,
+                "expected_impact": "100-150 عميل جديد"
+              }
+            ]
+          },
+          
+          "step_6_predictions": {
+            "3_months_projection": {
+              "revenue": "900000 (+12.5%)",
+              "new_customers": "200-300",
+              "digital_presence_score": "45 (+20 points)",
+              "confidence": 0.75
+            }
+          },
+          
+          "step_7_alerts_generated": [
+            {
+              "type": "warning",
+              "message": "هوامش ضيقة - مراقبة التكاليف مهمة",
+              "action": "مراجعة أسعار القائمة وتحسين الكفاءة"
+            },
+            {
+              "type": "opportunity",
+              "message": "عملاء راضون - فرصة ذهبية للنمو العضوي",
+              "action": "برنامج إحالة مكثف"
+            }
+          ]
+        }
+      },
+      
+      "example_2_successful_clinic": {
+        "scenario": "عيادة أسنان ناجحة تريد التوسع",
+        
+        "key_answers": {
+          "sector": "healthcare",
+          "years_in_business": 7,
+          "annual_revenue": 4500000,
+          "revenue_trend": "growing",
+          "monthly_costs": 250000,
+          "marketing_budget": 40000,
+          "digital_maturity_score": 65,
+          "customer_satisfaction": 9,
+          "brand_awareness": 7,
+          "goals": "فتح فرع ثاني"
+        },
+        
+        "ai_analysis_process": {
+          "step_1_context": {
+            "business_stage": "mature",
+            "urgency_level": "medium",
+            "budget_tier": "medium",
+            "digital_maturity": "advanced",
+            "market_position": "strong_local_player"
+          },
+          
+          "step_2_pattern": {
+            "pattern_detected": "ready_for_expansion",
+            "evidence": [
+              "consistent_growth",
+              "healthy_margins",
+              "high_satisfaction",
+              "strong_brand",
+              "adequate_resources"
+            ],
+            "confidence": 0.92
+          },
+          
+          "step_3_expert_insights": {
+            "financial_analyst": {
+              "assessment": "صحة مالية ممتازة - هوامش 33% وتدفق نقدي إيجابي",
+              "recommendation": "التوسع مدعوم مالياً - يمكن تمويله ذاتياً",
+              "caution": "التأكد من عدم تأثر العيادة الأولى"
+            },
+            "market_analyst": {
+              "insight": "السوق المحلي لا يزال لديه مجال للنمو",
+              "recommendation": "التوسع في منطقة قريبة للاستفادة من السمعة"
+            },
+            "operations_expert": {
+              "priority": "تطوير أنظمة قابلة للتكرار قبل التوسع",
+              "checklist": [
+                "توثيق العمليات",
+                "نظام CRM",
+                "تدريب الفريق الجديد",
+                "إدارة مركزية"
+              ]
+            }
+          },
+          
+          "step_4_strategy": {
+            "chief_strategist_recommendation": "خطة توسع 12 شهر",
+            "approach": "growth_with_systems",
+            "phases": {
+              "months_1_3": "تطوير الأنظمة والعمليات",
+              "months_4_6": "البحث وتأمين الموقع الثاني",
+              "months_7_9": "التجهيز والتسويق ما قبل الإطلاق",
+              "months_10_12": "الإطلاق والتشغيل"
+            }
+          },
+          
+          "step_5_detailed_plan": {
+            "pre_launch_marketing": {
+              "budget": "100000 SAR",
+              "tactics": [
+                "حملة توعية في المنطقة الجديدة",
+                "عروض تأسيسية",
+                "شراكات محلية",
+                "فعالية افتتاح"
+              ],
+              "kpi": "1000 حجز قبل الافتتاح"
+            },
+            
+            "systems_development": {
+              "crm": "تطبيق نظام إدارة علاقات العملاء",
+              "booking": "نظام حجز موحد للفرعين",
+              "reporting": "dashboard موحد للأداء"
+            }
+          },
+          
+          "step_6_predictions": {
+            "year_1_post_expansion": {
+              "combined_revenue": "7500000 (+66%)",
+              "branch_1_revenue": "5000000 (+11%)",
+              "branch_2_revenue": "2500000",
+              "confidence": 0.80
+            },
+            
+            "risks": [
+              "منافسة في الموقع الجديد",
+              "صعوبة إيجاد كادر بنفس الجودة",
+              "تشتت الإدارة"
+            ],
+            
+            "success_factors": [
+              "حفاظ على الجودة",
+              "أنظمة قوية",
+              "تسويق فعال للفرع الجديد"
+            ]
+          }
+        }
+      },
+      
+      "example_3_new_startup": {
+        "scenario": "مشروع ناشئ - متجر ملابس رياضية",
+        
+        "key_answers": {
+          "sector": "retail",
+          "years_in_business": 0.5,
+          "annual_revenue": 120000,
+          "revenue_trend": "growing",
+          "monthly_costs": 15000,
+          "marketing_budget": 0,
+          "digital_maturity_score": 15,
+          "has_ecommerce": false,
+          "target_audience": "شباب_رياضيين"
+        },
+        
+        "ai_analysis": {
+          "pattern": "early_stage_high_potential",
+          
+          "expert_consensus": {
+            "assessment": "بداية واعدة لكن تحتاج استثمار تسويقي",
+            "critical_need": "بناء حضور رقمي من الصفر",
+            "opportunity": "سوق نشط وجمهور متفاعل رقمياً"
+          },
+          
+          "recommendation": "خطة تأسيسية 6 أشهر",
+          
+          "priorities": [
+            {
+              "priority_1": "بناء متجر إلكتروني",
+              "cost": "15000 SAR",
+              "impact": "critical",
+              "timeline": "شهر واحد"
+            },
+            {
+              "priority_2": "حضور قوي على Instagram",
+              "cost": "صفر + محتوى",
+              "impact": "high",
+              "timeline": "مستمر"
+            },
+            {
+              "priority_3": "بدء ميزانية تسويقية",
+              "recommendation": "5000 SAR شهرياً كحد أدنى",
+              "allocation": "80% رقمي، 20% محتوى"
+            }
+          ],
+          
+          "realistic_expectations": {
+            "year_1_target": "500000 SAR إيرادات",
+            "growth_path": "تدريجي مع بناء القاعدة",
+            "break_even": "شهر 8-10"
+          }
+        }
+      }
+    },
+    
+    "key_differentiators": {
+      "why_this_system_is_unique": [
+        {
+          "feature": "فريق خبراء افتراضي",
+          "description": "10 خبراء بشخصيات وتخصصات حقيقية",
+          "benefit": "تحليل شامل من زوايا متعددة"
+        },
+        {
+          "feature": "ذكاء سياقي",
+          "description": "فهم عميق للسياق والعلاقات",
+          "benefit": "توصيات مخصصة ودقيقة"
+        },
+        {
+          "feature": "تعلم مستمر",
+          "description": "النظام يتعلم من كل حالة",
+          "benefit": "تحسن مستمر في الدقة"
+        },
+        {
+          "feature": "تنبؤ استباقي",
+          "description": "توقع المشاكل قبل حدوثها",
+          "benefit": "تجنب الأخطاء المكلفة"
+        },
+        {
+          "feature": "تنبيهات ذكية",
+          "description": "رصد فوري للفرص والمخاطر",
+          "benefit": "استغلال الفرص في الوقت المناسب"
+        }
+      ]
+    },
+    
+    "implementation_roadmap": {
+      "phase_1_mvp": {
+        "duration": "2_3_months",
+        "deliverables": [
+          "نظام الأسئلة الأساسي",
+          "3-5 خبراء أساسيين",
+          "محرك توصيات بسيط",
+          "تقرير أساسي"
+        ]
+      },
+      
+      "phase_2_enhancement": {
+        "duration": "3_4_months",
+        "deliverables": [
+          "كامل الخبراء العشرة",
+          "محركات الاستنتاج المتقدمة",
+          "نظام التنبيهات",
+          "تقارير متقدمة"
+        ]
+      },
+      
+      "phase_3_intelligence": {
+        "duration": "ongoing",
+        "deliverables": [
+          "التعلم الآلي",
+          "التحسين المستمر",
+          "توسيع قاعدة المعرفة",
+          "تكامل مع مصادر خارجية"
+        ]
+      }
+    },
+    
+    "technical_requirements": {
+      "backend": {
+        "language": "Python or Node.js",
+        "framework": "FastAPI or Express",
+        "database": "PostgreSQL + MongoDB",
+        "ai_ml": "TensorFlow or PyTorch for ML models"
+      },
+      
+      "frontend": {
+        "framework": "React or Vue",
+        "ui_library": "Material-UI or Ant Design",
+        "charts": "Chart.js or D3.js",
+        "state_management": "Redux or Vuex"
+      },
+      
+      "infrastructure": {
+        "hosting": "AWS or Google Cloud",
+        "cdn": "CloudFlare",
+        "monitoring": "DataDog or New Relic",
+        "analytics": "Google Analytics + Custom"
+      }
+    }
+  }
+}

@@ -1,0 +1,662 @@
+{
+  "dynamic_questioning_system": {
+    "name": "نظام الأسئلة الديناميكية",
+    "description": "نظام ذكي لطرح الأسئلة بناءً على السياق والإجابات السابقة",
+    
+    "question_flow_engine": {
+      "adaptive_logic": {
+        "enabled": true,
+        "skip_irrelevant": true,
+        "deep_dive_on_flags": true,
+        "follow_up_automatically": true,
+        "intelligent_branching": true
+      },
+      
+      "question_routing_rules": {
+        "conditional_questions": {
+          "rule_type": "if_then_ask",
+          "examples": [
+            {
+              "if": "has_website == false",
+              "then_skip": ["website_traffic", "website_conversion", "seo_ranking"],
+              "then_ask": ["website_development_priority", "budget_for_website"]
+            },
+            {
+              "if": "no_social_media",
+              "then_skip": ["social_engagement", "follower_count"],
+              "then_ask": ["social_media_readiness", "platform_preferences"]
+            },
+            {
+              "if": "revenue < 100000",
+              "then_prioritize": ["survival_questions", "quick_win_opportunities"],
+              "then_deprioritize": ["advanced_analytics", "complex_campaigns"]
+            }
+          ]
+        },
+        
+        "intelligent_skipping": {
+          "skip_if_obvious": {
+            "enabled": true,
+            "examples": [
+              {
+                "if": "years_in_business == 0.5",
+                "skip": ["historical_performance_questions"],
+                "reason": "too_new_for_historical_data"
+              }
+            ]
+          },
+          
+          "skip_if_inferred": {
+            "enabled": true,
+            "confidence_threshold": 0.85,
+            "examples": [
+              {
+                "if_inferred": "small_local_business",
+                "skip": ["international_expansion", "complex_attribution"],
+                "confidence": 0.90
+              }
+            ]
+          },
+          
+          "skip_if_not_applicable": {
+            "by_sector": true,
+            "examples": [
+              {
+                "sector": "professional_services",
+                "skip": ["inventory_management", "supply_chain"]
+              },
+              {
+                "sector": "ecommerce",
+                "skip": ["foot_traffic", "physical_location_optimization"]
+              }
+            ]
+          }
+        },
+        
+        "deep_dive_triggers": {
+          "red_flag_detection": {
+            "when": "answer_indicates_problem",
+            "action": "ask_follow_up_questions",
+            "examples": [
+              {
+                "trigger": "revenue_declining",
+                "follow_up": [
+                  "منذ متى والإيرادات في انخفاض؟",
+                  "ما الأسباب التي تعتقد أنها وراء ذلك؟",
+                  "هل اتخذتم إجراءات لمواجهة الانخفاض؟",
+                  "ما كانت النتائج؟"
+                ]
+              },
+              {
+                "trigger": "high_customer_churn",
+                "follow_up": [
+                  "ما معدل الانقطاع الشهري تقريباً؟",
+                  "هل تعرفون أسباب مغادرة العملاء؟",
+                  "هل أجريتم استبيانات خروج؟",
+                  "ما الأنماط المشتركة في العملاء المغادرين؟"
+                ]
+              }
+            ]
+          },
+          
+          "opportunity_detection": {
+            "when": "answer_indicates_opportunity",
+            "action": "explore_potential",
+            "examples": [
+              {
+                "trigger": "high_satisfaction_low_awareness",
+                "follow_up": [
+                  "هل لديكم برنامج إحالة؟",
+                  "كم نسبة العملاء الجدد من الإحالات؟",
+                  "هل طلبتم من العملاء الراضين تقييمات؟"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      
+      "question_sequencing": {
+        "logical_chains": [
+          {
+            "chain_name": "financial_deep_dive",
+            "sequence": [
+              "annual_revenue",
+              "revenue_trend",
+              "revenue_sources",
+              "cost_structure",
+              "profit_margin",
+              "marketing_budget",
+              "budget_allocation"
+            ],
+            "validations": {
+              "revenue_costs_consistency": true,
+              "budget_revenue_ratio": true
+            }
+          },
+          {
+            "chain_name": "customer_understanding",
+            "sequence": [
+              "who_is_target_customer",
+              "customer_demographics",
+              "customer_psychographics",
+              "customer_pain_points",
+              "purchase_drivers",
+              "customer_journey",
+              "satisfaction_metrics"
+            ]
+          }
+        ],
+        
+        "priority_based_ordering": {
+          "method": "weighted_importance",
+          "factors": {
+            "criticality": 0.40,
+            "dependency": 0.30,
+            "user_readiness": 0.20,
+            "time_sensitivity": 0.10
+          }
+        }
+      }
+    },
+    
+    "question_types": {
+      "multiple_choice": {
+        "format": "radio_or_checkbox",
+        "allows_other": true,
+        "validation": "required_selection",
+        "ai_processing": "categorical_analysis"
+      },
+      
+      "scale_rating": {
+        "format": "1_to_10_slider",
+        "labels": "contextual",
+        "validation": "numeric_range",
+        "ai_processing": "scoring_and_benchmarking"
+      },
+      
+      "numeric_input": {
+        "format": "number_field",
+        "units": "contextual",
+        "validation": "positive_number",
+        "ai_processing": "calculation_and_comparison"
+      },
+      
+      "text_input": {
+        "format": "short_or_long_text",
+        "validation": "min_max_length",
+        "ai_processing": "nlp_sentiment_entity_extraction"
+      },
+      
+      "matrix_grid": {
+        "format": "multi_dimensional_rating",
+        "use_case": "rate_multiple_items_on_multiple_criteria",
+        "ai_processing": "pattern_analysis"
+      }
+    },
+    
+    "question_intelligence": {
+      "context_aware_phrasing": {
+        "enabled": true,
+        "personalizes": true,
+        "examples": [
+          {
+            "generic": "كم عدد موظفيكم؟",
+            "contextual_if_startup": "كم عدد أعضاء فريقكم حالياً؟",
+            "contextual_if_established": "ما حجم فريق العمل لديكم؟"
+          }
+        ]
+      },
+      
+      "help_and_clarification": {
+        "tooltip_help": true,
+        "examples": true,
+        "definitions": true,
+        "why_we_ask": true
+      }
+    }
+  },
+
+  "reporting_engine": {
+    "name": "محرك التقارير الذكية",
+    "description": "يولد تقارير شاملة ومخصصة بناءً على التحليل",
+    
+    "report_types": {
+      "executive_summary": {
+        "id": "report_exec",
+        "name": "الملخص التنفيذي",
+        "length": "2_3_pages",
+        "audience": "decision_makers",
+        "time_to_read": "5_minutes",
+        
+        "sections": [
+          {
+            "section": "overview",
+            "title": "نظرة عامة",
+            "content": [
+              "business_snapshot",
+              "current_situation_summary",
+              "key_challenges",
+              "key_opportunities"
+            ]
+          },
+          {
+            "section": "assessment",
+            "title": "التقييم الشامل",
+            "content": [
+              "maturity_scores",
+              "risk_assessment",
+              "opportunity_score",
+              "competitive_position"
+            ],
+            "format": "visual_scorecards"
+          },
+          {
+            "section": "strategic_recommendation",
+            "title": "التوصية الاستراتيجية",
+            "content": [
+              "recommended_plan_type",
+              "rationale",
+              "expected_outcomes",
+              "investment_required"
+            ],
+            "format": "clear_actionable"
+          },
+          {
+            "section": "priorities",
+            "title": "الأولويات الرئيسية",
+            "content": [
+              "top_3_5_priorities",
+              "quick_wins",
+              "critical_fixes"
+            ],
+            "format": "bullet_points"
+          },
+          {
+            "section": "next_steps",
+            "title": "الخطوات التالية",
+            "content": [
+              "immediate_actions",
+              "decision_points",
+              "timeline_overview"
+            ]
+          }
+        ],
+        
+        "visual_elements": [
+          "executive_dashboard",
+          "score_gauges",
+          "priority_matrix",
+          "timeline_roadmap"
+        ]
+      },
+      
+      "detailed_analysis": {
+        "id": "report_detailed",
+        "name": "التحليل التفصيلي",
+        "length": "15_25_pages",
+        "audience": "implementers_strategists",
+        "time_to_read": "30_45_minutes",
+        
+        "sections": [
+          {
+            "section": "business_overview",
+            "expert": "chief_strategist",
+            "includes": [
+              "company_background",
+              "market_context",
+              "business_model",
+              "current_performance"
+            ]
+          },
+          {
+            "section": "financial_analysis",
+            "expert": "financial_analyst",
+            "includes": [
+              "revenue_analysis",
+              "cost_structure",
+              "profitability",
+              "marketing_budget_assessment",
+              "roi_projections",
+              "financial_health_score"
+            ]
+          },
+          {
+            "section": "market_analysis",
+            "expert": "market_analyst",
+            "includes": [
+              "market_size_and_growth",
+              "competitive_landscape",
+              "swot_analysis",
+              "market_position",
+              "opportunities_threats"
+            ]
+          },
+          {
+            "section": "customer_analysis",
+            "expert": "consumer_psychologist",
+            "includes": [
+              "buyer_personas",
+              "customer_journey_maps",
+              "behavioral_insights",
+              "satisfaction_analysis",
+              "retention_analysis"
+            ]
+          },
+          {
+            "section": "digital_assessment",
+            "expert": "digital_marketing_expert",
+            "includes": [
+              "digital_maturity_score",
+              "channel_performance",
+              "website_analysis",
+              "social_media_audit",
+              "seo_status",
+              "paid_advertising_assessment"
+            ]
+          },
+          {
+            "section": "brand_assessment",
+            "expert": "brand_strategist",
+            "includes": [
+              "brand_health",
+              "positioning_analysis",
+              "messaging_effectiveness",
+              "content_strategy_review"
+            ]
+          },
+          {
+            "section": "data_insights",
+            "expert": "data_scientist",
+            "includes": [
+              "key_patterns",
+              "correlations",
+              "predictive_models",
+              "forecasts",
+              "anomalies"
+            ]
+          },
+          {
+            "section": "gap_analysis",
+            "expert": "operations_expert",
+            "includes": [
+              "current_vs_desired_state",
+              "capability_gaps",
+              "resource_gaps",
+              "priority_gaps_to_close"
+            ]
+          },
+          {
+            "section": "risk_assessment",
+            "expert": "risk_manager",
+            "includes": [
+              "risk_register",
+              "risk_scores",
+              "mitigation_strategies",
+              "contingency_plans"
+            ]
+          },
+          {
+            "section": "opportunities",
+            "expert": "innovation_scout",
+            "includes": [
+              "identified_opportunities",
+              "innovation_potential",
+              "competitive_advantages",
+              "growth_vectors"
+            ]
+          }
+        ]
+      },
+      
+      "action_plan": {
+        "id": "report_action",
+        "name": "خطة العمل التفصيلية",
+        "length": "10_15_pages",
+        "audience": "execution_team",
+        "time_to_read": "20_minutes",
+        
+        "sections": [
+          {
+            "section": "objectives",
+            "includes": [
+              "smart_goals",
+              "kpis",
+              "success_metrics",
+              "target_milestones"
+            ]
+          },
+          {
+            "section": "strategy_overview",
+            "includes": [
+              "chosen_strategy",
+              "rationale",
+              "expected_outcomes",
+              "timeline"
+            ]
+          },
+          {
+            "section": "detailed_actions",
+            "format": "gantt_chart_with_details",
+            "for_each_action": {
+              "action_name": "string",
+              "description": "string",
+              "responsible": "string",
+              "timeline": "dates",
+              "dependencies": "array",
+              "resources_needed": "object",
+              "budget": "number",
+              "expected_outcome": "string",
+              "kpis": "array"
+            }
+          },
+          {
+            "section": "budget_breakdown",
+            "includes": [
+              "total_budget",
+              "allocation_by_channel",
+              "allocation_by_phase",
+              "allocation_by_tactic",
+              "contingency"
+            ],
+            "format": "tables_and_charts"
+          },
+          {
+            "section": "resources",
+            "includes": [
+              "team_requirements",
+              "tools_needed",
+              "external_partners",
+              "training_needs"
+            ]
+          },
+          {
+            "section": "monitoring_framework",
+            "includes": [
+              "kpi_dashboard",
+              "reporting_schedule",
+              "review_meetings",
+              "adjustment_process"
+            ]
+          },
+          {
+            "section": "risk_mitigation",
+            "includes": [
+              "key_risks",
+              "mitigation_plans",
+              "contingency_actions",
+              "escalation_procedures"
+            ]
+          }
+        ]
+      },
+      
+      "monthly_performance": {
+        "id": "report_monthly",
+        "name": "تقرير الأداء الشهري",
+        "length": "5_8_pages",
+        "frequency": "monthly",
+        "audience": "client_and_team",
+        
+        "sections": [
+          {
+            "section": "executive_summary",
+            "includes": ["highlights", "lowlights", "key_insights"]
+          },
+          {
+            "section": "kpi_dashboard",
+            "includes": [
+              "all_kpis_with_targets",
+              "actual_vs_target",
+              "trend_vs_last_month",
+              "trend_vs_last_year"
+            ],
+            "format": "visual_dashboard"
+          },
+          {
+            "section": "channel_performance",
+            "for_each_channel": {
+              "metrics": "channel_specific",
+              "insights": "what_worked_what_didnt",
+              "optimizations": "actions_taken"
+            }
+          },
+          {
+            "section": "campaign_results",
+            "for_each_campaign": {
+              "objectives": "string",
+              "results": "metrics",
+              "roi": "number",
+              "learnings": "array"
+            }
+          },
+          {
+            "section": "budget_tracking",
+            "includes": [
+              "planned_vs_actual_spend",
+              "remaining_budget",
+              "roi_by_channel",
+              "cost_efficiency"
+            ]
+          },
+          {
+            "section": "insights_and_recommendations",
+            "includes": [
+              "key_learnings",
+              "what_to_continue",
+              "what_to_stop",
+              "what_to_start",
+              "next_month_focus"
+            ]
+          }
+        ]
+      },
+      
+      "competitive_intelligence": {
+        "id": "report_competitive",
+        "name": "تقرير الاستخبارات التنافسية",
+        "length": "8_12_pages",
+        "frequency": "quarterly",
+        
+        "sections": [
+          {
+            "section": "competitive_landscape_overview",
+            "includes": [
+              "market_map",
+              "key_players",
+              "market_share_distribution",
+              "competitive_intensity"
+            ]
+          },
+          {
+            "section": "competitor_profiles",
+            "for_each_competitor": {
+              "overview": "string",
+              "strengths": "array",
+              "weaknesses": "array",
+              "strategy": "string",
+              "recent_moves": "array",
+              "digital_presence_score": "number",
+              "threat_level": "string"
+            }
+          },
+          {
+            "section": "comparative_analysis",
+            "includes": [
+              "positioning_map",
+              "feature_comparison_matrix",
+              "pricing_comparison",
+              "marketing_intensity_comparison",
+              "customer_satisfaction_comparison"
+            ]
+          },
+          {
+            "section": "competitive_opportunities",
+            "includes": [
+              "competitor_gaps_we_can_fill",
+              "our_advantages_to_amplify",
+              "defensive_moves_needed"
+            ]
+          }
+        ]
+      }
+    },
+    
+    "report_generation_process": {
+      "data_aggregation": {
+        "sources": [
+          "questionnaire_responses",
+          "analysis_results",
+          "expert_insights",
+          "external_benchmarks",
+          "industry_data"
+        ],
+        "validation": "cross_check_consistency"
+      },
+      
+      "insight_extraction": {
+        "method": "ai_pattern_recognition",
+        "looks_for": [
+          "key_trends",
+          "critical_issues",
+          "hidden_opportunities",
+          "risk_factors",
+          "success_patterns"
+        ],
+        "prioritizes_by": "impact_and_actionability"
+      },
+      
+      "narrative_generation": {
+        "tone": "professional_yet_accessible",
+        "language": "arabic",
+        "style": "clear_actionable",
+        "avoids": "jargon_without_explanation",
+        "includes": "specific_examples_and_numbers"
+      },
+      
+      "visualization": {
+        "charts_and_graphs": true,
+        "infographics": true,
+        "tables": true,
+        "icons_and_symbols": true,
+        "color_coding": "meaningful",
+        "accessibility": "high_contrast_readable_fonts"
+      },
+      
+      "quality_assurance": {
+        "consistency_check": true,
+        "accuracy_verification": true,
+        "completeness_check": true,
+        "readability_score": "minimum_8_out_of_10",
+        "expert_review": "chief_strategist_final_approval"
+      }
+    },
+    
+    "report_delivery": {
+      "formats": ["pdf", "web_dashboard", "presentation", "editable_doc"],
+      "branding": "client_branded",
+      "distribution": ["email", "download_link", "api"],
+      "access_control": "role_based"
+    }
+  }
+}

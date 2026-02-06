@@ -1,0 +1,525 @@
+{
+  "question_bank": {
+    "metadata": {
+      "total_questions": 250,
+      "categories": 20,
+      "last_updated": "2026-02-05"
+    },
+    
+    "questions": [
+      {
+        "id": "Q_BASIC_001",
+        "category": "basic_info",
+        "subcategory": "company_foundation",
+        "question_ar": "ما هو القطاع الذي تعمل فيه منشأتكم؟",
+        "question_en": "What sector does your business operate in?",
+        "type": "single_choice",
+        "required": true,
+        "priority": "critical",
+        "order": 1,
+        
+        "options": [
+          {"value": "education", "label_ar": "التعليم الخاص", "label_en": "Private Education"},
+          {"value": "healthcare", "label_ar": "الخدمات الصحية والتجميلية", "label_en": "Healthcare & Beauty"},
+          {"value": "fnb", "label_ar": "الأغذية والمشروبات", "label_en": "Food & Beverage"},
+          {"value": "retail", "label_ar": "التجزئة المتخصصة", "label_en": "Specialty Retail"},
+          {"value": "professional_services", "label_ar": "الخدمات المهنية", "label_en": "Professional Services"},
+          {"value": "real_estate", "label_ar": "العقارات", "label_en": "Real Estate"},
+          {"value": "fitness", "label_ar": "اللياقة والخدمات الشخصية", "label_en": "Fitness & Personal Services"},
+          {"value": "crafts", "label_ar": "الحرف والصناعات اليدوية", "label_en": "Crafts & Handmade"},
+          {"value": "other", "label_ar": "أخرى (حدد)", "label_en": "Other (specify)"}
+        ],
+        
+        "help_text": "اختر القطاع الذي يمثل نشاطك الرئيسي. هذا يساعدنا في تخصيص التوصيات وفقاً لخصائص قطاعك.",
+        
+        "metadata": {
+          "weight": 1.5,
+          "affects_questions": ["all_sector_specific_questions"],
+          "unlocks": ["sector_characteristics", "benchmarks"],
+          "required_for_analysis": [
+            "sector_benchmarking",
+            "competitive_analysis",
+            "best_practices_recommendation"
+          ]
+        },
+        
+        "ai_processing": {
+          "sets_context": "sector",
+          "loads_benchmarks": "sector_specific",
+          "activates_questions": "sector_questions",
+          "deactivates_questions": "non_applicable_sectors"
+        },
+        
+        "expert_usage": {
+          "market_analyst": {
+            "uses_for": "competitive_landscape_analysis",
+            "combines_with": ["market_size", "competition_level"]
+          },
+          "financial_analyst": {
+            "uses_for": "benchmark_comparison",
+            "loads": "sector_financial_benchmarks"
+          },
+          "all_experts": {
+            "context": "sector_specific_expertise"
+          }
+        }
+      },
+      
+      {
+        "id": "Q_BASIC_002",
+        "category": "basic_info",
+        "subcategory": "company_foundation",
+        "question_ar": "منذ متى تأسست منشأتكم؟",
+        "question_en": "When was your business established?",
+        "type": "numeric_input",
+        "required": true,
+        "priority": "high",
+        "order": 2,
+        
+        "input_config": {
+          "unit": "years",
+          "min": 0,
+          "max": 100,
+          "step": 0.5,
+          "placeholder": "مثال: 2.5 سنة"
+        },
+        
+        "help_text": "أدخل عدد السنوات منذ التأسيس. إذا كنتم في السنة الأولى، أدخلوا الأشهر كـ 0.5 (6 أشهر) مثلاً.",
+        
+        "metadata": {
+          "weight": 1.2,
+          "affects_questions": ["historical_performance", "growth_trajectory"],
+          "required_for_analysis": [
+            "business_stage_identification",
+            "maturity_assessment",
+            "growth_projection"
+          ]
+        },
+        
+        "ai_processing": {
+          "determines": "business_stage",
+          "classifications": {
+            "startup": {"range": [0, 2], "characteristics": "early_stage_high_risk_high_potential"},
+            "early_growth": {"range": [2, 5], "characteristics": "establishing_market_fit"},
+            "growth": {"range": [5, 10], "characteristics": "scaling_operations"},
+            "mature": {"range": [10, 30], "characteristics": "established_stable"},
+            "legacy": {"range": [30, 100], "characteristics": "long_established"}
+          },
+          
+          "conditional_logic": {
+            "if_less_than_1_year": {
+              "skip_questions": ["5_year_performance", "historical_trends"],
+              "add_questions": ["launch_strategy", "initial_traction"],
+              "adjust_expectations": "realistic_for_new_business"
+            },
+            "if_more_than_10_years": {
+              "add_questions": ["transformation_needs", "innovation_gaps"],
+              "focus_on": "renewal_and_optimization"
+            }
+          }
+        },
+        
+        "expert_usage": {
+          "chief_strategist": {
+            "uses_for": "lifecycle_stage_strategy",
+            "infers": "appropriate_growth_expectations"
+          },
+          "financial_analyst": {
+            "uses_for": "revenue_trajectory_analysis",
+            "calculates": "cagr_potential"
+          },
+          "risk_manager": {
+            "uses_for": "survival_risk_assessment",
+            "notes": "newer_businesses_higher_risk"
+          }
+        },
+        
+        "benchmarks": {
+          "survival_rate": {
+            "year_1": 0.80,
+            "year_3": 0.60,
+            "year_5": 0.50,
+            "year_10": 0.35
+          }
+        }
+      },
+      
+      {
+        "id": "Q_FIN_001",
+        "category": "financial",
+        "subcategory": "revenue",
+        "question_ar": "ما هو حجم إيراداتكم السنوية الحالية (بالريال السعودي)؟",
+        "question_en": "What is your current annual revenue (in SAR)?",
+        "type": "numeric_input",
+        "required": true,
+        "priority": "critical",
+        "order": 10,
+        
+        "input_config": {
+          "unit": "SAR",
+          "min": 0,
+          "max": 1000000000,
+          "format": "currency",
+          "placeholder": "مثال: 500000"
+        },
+        
+        "help_text": "أدخل إجمالي الإيرادات السنوية (آخر 12 شهر). إذا لم تكمل سنة بعد، قدّر على أساس سنوي.",
+        
+        "metadata": {
+          "weight": 2.0,
+          "extremely_important": true,
+          "affects_questions": [
+            "Q_FIN_005_marketing_budget",
+            "Q_TEAM_001_team_size",
+            "Q_GOALS_001_growth_target"
+          ],
+          "required_for_analysis": [
+            "financial_health",
+            "budget_capacity",
+            "growth_potential",
+            "market_position",
+            "roi_calculation"
+          ]
+        },
+        
+        "ai_processing": {
+          "determines": ["business_size", "budget_tier", "market_position"],
+          
+          "size_classifications": {
+            "micro": {"range": [0, 100000], "tier": "very_small"},
+            "small": {"range": [100001, 1000000], "tier": "small"},
+            "medium": {"range": [1000001, 10000000], "tier": "medium"},
+            "large": {"range": [10000001, 100000000], "tier": "large"},
+            "enterprise": {"range": [100000001, 1000000000], "tier": "very_large"}
+          },
+          
+          "sector_benchmarking": {
+            "enabled": true,
+            "compares_against": "sector_averages",
+            "flags_if": "significantly_below_or_above"
+          },
+          
+          "calculations": {
+            "monthly_revenue": "annual_revenue / 12",
+            "daily_revenue": "annual_revenue / 365",
+            "revenue_per_employee": "calculated_when_team_size_known"
+          },
+          
+          "red_flags": [
+            {
+              "condition": "revenue < 50000 AND years_in_business > 2",
+              "severity": "critical",
+              "message": "إيرادات منخفضة جداً بالنسبة لعمر المنشأة",
+              "assigned_expert": "financial_analyst"
+            },
+            {
+              "condition": "revenue_per_employee < sector_benchmark * 0.5",
+              "severity": "high",
+              "message": "إنتاجية منخفضة - مراجعة الكفاءة التشغيلية",
+              "assigned_expert": "operations_expert"
+            }
+          ],
+          
+          "green_flags": [
+            {
+              "condition": "revenue > sector_median",
+              "message": "أداء مالي فوق المتوسط",
+              "opportunity": "زيادة الاستثمار للنمو"
+            }
+          ]
+        },
+        
+        "expert_usage": {
+          "financial_analyst": {
+            "primary_metric": true,
+            "uses_for": [
+              "financial_health_assessment",
+              "budget_capacity_calculation",
+              "roi_projection",
+              "growth_rate_analysis"
+            ],
+            "combines_with": [
+              "Q_FIN_002_costs",
+              "Q_FIN_003_profit_margin",
+              "Q_FIN_005_marketing_budget"
+            ],
+            "calculates": [
+              "profit_estimate",
+              "marketing_budget_adequacy",
+              "investment_capacity"
+            ]
+          },
+          
+          "chief_strategist": {
+            "uses_for": "overall_business_assessment",
+            "infers": "stage_and_potential",
+            "determines": "recommended_strategy_tier"
+          },
+          
+          "market_analyst": {
+            "uses_for": "market_position_estimation",
+            "estimates": "market_share",
+            "compares": "vs_competitors"
+          },
+          
+          "digital_marketing_expert": {
+            "uses_for": "budget_tier_determination",
+            "recommends": "appropriate_channels_and_tactics"
+          }
+        },
+        
+        "follow_up_questions": {
+          "if_declining": [
+            "Q_FIN_001B_decline_duration",
+            "Q_FIN_001C_decline_reasons",
+            "Q_FIN_001D_corrective_actions"
+          ],
+          "if_growing": [
+            "Q_FIN_001E_growth_rate",
+            "Q_FIN_001F_growth_drivers"
+          ]
+        }
+      },
+      
+      {
+        "id": "Q_FIN_002",
+        "category": "financial",
+        "subcategory": "costs",
+        "question_ar": "ما هي التكاليف التشغيلية الشهرية التقريبية؟",
+        "question_en": "What are your approximate monthly operating costs?",
+        "type": "numeric_input",
+        "required": true,
+        "priority": "high",
+        "order": 11,
+        
+        "input_config": {
+          "unit": "SAR",
+          "min": 0,
+          "max": 100000000,
+          "format": "currency"
+        },
+        
+        "help_text": "أدخل متوسط التكاليف الشهرية (إيجار، رواتب، مرافق، مستلزمات، إلخ) باستثناء التسويق.",
+        
+        "metadata": {
+          "weight": 1.8,
+          "depends_on": ["Q_FIN_001"],
+          "required_for_analysis": [
+            "profit_margin_calculation",
+            "financial_sustainability",
+            "break_even_analysis"
+          ]
+        },
+        
+        "ai_processing": {
+          "calculations": {
+            "annual_costs": "monthly_costs * 12",
+            "gross_profit": "annual_revenue - annual_costs",
+            "profit_margin": "gross_profit / annual_revenue * 100",
+            "burn_rate": "if_costs_exceed_revenue"
+          },
+          
+          "validations": [
+            {
+              "rule": "costs_should_be_less_than_revenue",
+              "if_violated": {
+                "severity": "critical",
+                "alert": "التكاليف أعلى من الإيرادات - وضع غير مستدام",
+                "recommendation": "تخفيض التكاليف أو زيادة الإيرادات بشكل عاجل",
+                "expert": "financial_analyst"
+              }
+            }
+          ],
+          
+          "benchmarking": {
+            "cost_to_revenue_ratio": "costs / revenue",
+            "healthy_range": [0.50, 0.75],
+            "flags": {
+              "if_ratio_over_0.90": "خطر مالي - هوامش ضيقة جداً",
+              "if_ratio_over_1.0": "خسائر - غير مستدام"
+            }
+          }
+        },
+        
+        "expert_usage": {
+          "financial_analyst": {
+            "critical_for": "profitability_analysis",
+            "calculates": ["profit_margin", "break_even_point"],
+            "determines": "financial_health_score"
+          }
+        }
+      },
+      
+      {
+        "id": "Q_FIN_005",
+        "category": "financial",
+        "subcategory": "marketing_budget",
+        "question_ar": "ما هي الميزانية التسويقية الشهرية الحالية؟",
+        "question_en": "What is your current monthly marketing budget?",
+        "type": "numeric_input",
+        "required": true,
+        "priority": "critical",
+        "order": 15,
+        
+        "input_config": {
+          "unit": "SAR",
+          "min": 0,
+          "max": 10000000,
+          "format": "currency",
+          "allow_zero": true
+        },
+        
+        "help_text": "أدخل إجمالي ما تنفقونه شهرياً على التسويق (إعلانات، محتوى، تصميم، إلخ). إذا لم يكن هناك ميزانية، أدخل 0.",
+        
+        "metadata": {
+          "weight": 2.0,
+          "extremely_important": true,
+          "depends_on": ["Q_FIN_001"],
+          "required_for_analysis": [
+            "roi_calculation",
+            "budget_adequacy",
+            "channel_affordability",
+            "strategy_feasibility"
+          ]
+        },
+        
+        "ai_processing": {
+          "calculations": {
+            "annual_marketing_budget": "monthly_budget * 12",
+            "budget_as_percent_of_revenue": "(annual_budget / annual_revenue) * 100",
+            "budget_per_customer": "annual_budget / customer_count"
+          },
+          
+          "sector_benchmarking": {
+            "education": {"ideal_percent": [8, 15]},
+            "healthcare": {"ideal_percent": [10, 20]},
+            "fnb": {"ideal_percent": [5, 12]},
+            "retail": {"ideal_percent": [7, 15]},
+            "professional_services": {"ideal_percent": [10, 20]},
+            "real_estate": {"ideal_percent": [8, 15]},
+            "fitness": {"ideal_percent": [10, 20]},
+            "crafts": {"ideal_percent": [8, 15]}
+          },
+          
+          "budget_assessment": {
+            "classifications": {
+              "no_budget": {
+                "condition": "budget == 0",
+                "severity": "critical",
+                "message": "لا توجد ميزانية تسويقية - النمو سيكون محدوداً جداً",
+                "recommendation": "تخصيص ميزانية ولو بسيطة للبداية"
+              },
+              "severely_underfunded": {
+                "condition": "budget_percent < sector_min * 0.5",
+                "severity": "high",
+                "message": "الميزانية أقل بكثير من المعيار - صعوبة في المنافسة",
+                "recommendation": "زيادة الميزانية تدريجياً"
+              },
+              "underfunded": {
+                "condition": "budget_percent < sector_min",
+                "severity": "medium",
+                "message": "الميزانية أقل من المعيار",
+                "recommendation": "النظر في زيادة الاستثمار التسويقي"
+              },
+              "adequate": {
+                "condition": "sector_min <= budget_percent <= sector_max",
+                "message": "الميزانية ضمن المعدل الطبيعي",
+                "recommendation": "التركيز على الكفاءة والعائد"
+              },
+              "high": {
+                "condition": "budget_percent > sector_max AND budget_percent < 30",
+                "message": "ميزانية فوق المتوسط",
+                "recommendation": "التأكد من تحقيق عوائد تبرر الإنفاق"
+              },
+              "excessive": {
+                "condition": "budget_percent >= 30",
+                "severity": "high",
+                "message": "ميزانية مرتفعة جداً مقارنة بالإيرادات",
+                "recommendation": "مراجعة فورية للإنفاق والعوائد",
+                "alert_expert": "financial_analyst"
+              }
+            }
+          },
+          
+          "roi_expectations": {
+            "if_budget_low": {
+              "expected_roi": "2_3x",
+              "strategy": "focus_on_efficiency_and_organic"
+            },
+            "if_budget_medium": {
+              "expected_roi": "3_5x",
+              "strategy": "balanced_paid_and_organic"
+            },
+            "if_budget_high": {
+              "expected_roi": "4_8x",
+              "strategy": "aggressive_multi_channel"
+            }
+          }
+        },
+        
+        "expert_usage": {
+          "financial_analyst": {
+            "primary_concern": "roi_and_sustainability",
+            "calculates": [
+              "expected_return",
+              "payback_period",
+              "budget_efficiency"
+            ],
+            "alerts_if": "budget_unsustainable"
+          },
+          
+          "digital_marketing_expert": {
+            "determines": "affordable_channels_and_tactics",
+            "plans": "budget_allocation",
+            "recommends": "optimization_opportunities"
+          },
+          
+          "chief_strategist": {
+            "uses_for": "strategy_tier_selection",
+            "determines": "scale_of_initiatives"
+          }
+        },
+        
+        "recommendations_engine": {
+          "if_zero_budget": {
+            "suggest": [
+              "organic_social_media",
+              "google_my_business",
+              "email_to_existing_customers",
+              "word_of_mouth_program",
+              "content_marketing_basics"
+            ],
+            "minimum_to_start": "5000_SAR_monthly"
+          },
+          
+          "if_under_10k": {
+            "suggest": [
+              "focus_on_one_or_two_channels",
+              "organic_social_plus_small_ads_budget",
+              "content_marketing",
+              "local_seo"
+            ]
+          },
+          
+          "if_10k_50k": {
+            "suggest": [
+              "multi_channel_approach",
+              "paid_social_and_search",
+              "professional_content_creation",
+              "influencer_partnerships"
+            ]
+          },
+          
+          "if_over_50k": {
+            "suggest": [
+              "comprehensive_digital_strategy",
+              "agency_partnership_consideration",
+              "advanced_analytics_and_automation",
+              "testing_and_innovation_budget"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
