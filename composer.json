@@ -1,0 +1,29 @@
+{
+    "name": "alfainternational/marketing-ai-system",
+    "description": "Marketing AI Assessment System - نظام الذكاء الاصطناعي التسويقي",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Khaled",
+            "role": "Marketing Specialist"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "vlucas/phpdotenv": "^5.5",
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "MarketingAI\\": "classes/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist"
+    }
+}

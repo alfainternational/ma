@@ -1,0 +1,39 @@
+RewriteEngine On
+
+# Force HTTPS in production
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "\.(env|json|md|txt|sql|log)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Allow access to data JSON files from PHP
+<FilesMatch "^(questions|experts|benchmarks|patterns)\.json$">
+    <If "%{REQUEST_URI} =~ m#^/data/#">
+        Order allow,deny
+        Deny from all
+    </If>
+</FilesMatch>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "DENY"
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# PHP settings
+<IfModule mod_php.c>
+    php_value upload_max_filesize 5M
+    php_value post_max_size 5M
+    php_value max_execution_time 300
+    php_flag display_errors off
+</IfModule>
