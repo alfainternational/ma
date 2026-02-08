@@ -3,7 +3,7 @@
  * Assessment Session Model
  * Marketing AI System
  */
-class AssessmentSession {
+class Session {
     private Database $db;
 
     public function __construct() {
@@ -65,14 +65,17 @@ class AssessmentSession {
     }
 
     public function getByUserId(int $userId, int $limit = 20): array {
-        $sessions = $this->db->fetchAll(
+        $stmt = $this->db->getConnection()->prepare(
             "SELECT s.*, c.name as company_name, c.sector as company_sector
              FROM assessment_sessions s
              JOIN companies c ON s.company_id = c.id
              WHERE s.user_id = :uid
-             ORDER BY s.started_at DESC LIMIT {$limit}",
-            ['uid' => $userId]
+             ORDER BY s.started_at DESC LIMIT :lim"
         );
+        $stmt->bindValue(':uid', $userId, \PDO::PARAM_INT);
+        $stmt->bindValue(':lim', $limit, \PDO::PARAM_INT);
+        $stmt->execute();
+        $sessions = $stmt->fetchAll();
         foreach ($sessions as &$s) {
             $s['context'] = json_decode($s['context'], true);
         }
@@ -127,8 +130,15 @@ class AssessmentSession {
             $params['status'] = $status;
         }
 
-        $sql .= " ORDER BY s.started_at DESC LIMIT {$limit} OFFSET {$offset}";
-        return $this->db->fetchAll($sql, $params);
+        $sql .= " ORDER BY s.started_at DESC LIMIT :lim OFFSET :off";
+        $params['lim'] = $limit;
+        $params['off'] = $offset;
+        $stmt = $this->db->getConnection()->prepare($sql);
+        foreach ($params as $k => $v) {
+            $stmt->bindValue(':' . $k, $v, is_int($v) ? \PDO::PARAM_INT : \PDO::PARAM_STR);
+        }
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 
     public function getStats(): array {

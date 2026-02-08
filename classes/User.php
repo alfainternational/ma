@@ -80,8 +80,11 @@ class User {
     }
 
     public function getRecentUsers(int $limit = 5): array {
-        return $this->db->fetchAll(
-            "SELECT id, email, full_name, role, created_at FROM users ORDER BY created_at DESC LIMIT {$limit}"
+        $stmt = $this->db->getConnection()->prepare(
+            "SELECT id, email, full_name, role, created_at FROM users ORDER BY created_at DESC LIMIT :lim"
         );
+        $stmt->bindValue(':lim', $limit, \PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 }

@@ -67,11 +67,15 @@ class Company {
     }
 
     public function getAll(int $limit = 50, int $offset = 0): array {
-        return $this->db->fetchAll(
+        $stmt = $this->db->getConnection()->prepare(
             "SELECT c.*, u.full_name as owner_name
              FROM companies c JOIN users u ON c.user_id = u.id
-             ORDER BY c.created_at DESC LIMIT {$limit} OFFSET {$offset}"
+             ORDER BY c.created_at DESC LIMIT :lim OFFSET :off"
         );
+        $stmt->bindValue(':lim', $limit, \PDO::PARAM_INT);
+        $stmt->bindValue(':off', $offset, \PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 
     public function getTotalCount(): int {

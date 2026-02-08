@@ -1,0 +1,122 @@
+{
+  "education": {
+    "sector_name": "التعليم الخاص",
+    "metrics": {
+      "digital_maturity": {"min": 20, "avg": 45, "top": 80, "unit": "score"},
+      "marketing_budget_pct": {"min": 2, "avg": 8, "top": 15, "unit": "percent"},
+      "customer_retention": {"min": 40, "avg": 70, "top": 90, "unit": "percent"},
+      "social_media_engagement": {"min": 0.5, "avg": 2.5, "top": 6, "unit": "percent"},
+      "website_conversion": {"min": 0.5, "avg": 2, "top": 5, "unit": "percent"},
+      "customer_acquisition_cost": {"min": 50, "avg": 300, "top": 150, "unit": "SAR"},
+      "customer_lifetime_value": {"min": 1000, "avg": 5000, "top": 15000, "unit": "SAR"},
+      "nps_score": {"min": -10, "avg": 30, "top": 70, "unit": "score"},
+      "revenue_growth": {"min": -5, "avg": 10, "top": 30, "unit": "percent"},
+      "team_productivity": {"min": 30, "avg": 55, "top": 85, "unit": "score"}
+    }
+  },
+  "healthcare": {
+    "sector_name": "الرعاية الصحية",
+    "metrics": {
+      "digital_maturity": {"min": 25, "avg": 50, "top": 85, "unit": "score"},
+      "marketing_budget_pct": {"min": 1, "avg": 5, "top": 12, "unit": "percent"},
+      "customer_retention": {"min": 45, "avg": 72, "top": 92, "unit": "percent"},
+      "social_media_engagement": {"min": 0.3, "avg": 1.8, "top": 5, "unit": "percent"},
+      "website_conversion": {"min": 0.8, "avg": 3, "top": 7, "unit": "percent"},
+      "customer_acquisition_cost": {"min": 80, "avg": 500, "top": 200, "unit": "SAR"},
+      "customer_lifetime_value": {"min": 2000, "avg": 8000, "top": 25000, "unit": "SAR"},
+      "nps_score": {"min": -5, "avg": 35, "top": 75, "unit": "score"},
+      "revenue_growth": {"min": -3, "avg": 12, "top": 35, "unit": "percent"},
+      "team_productivity": {"min": 35, "avg": 58, "top": 82, "unit": "score"}
+    }
+  },
+  "fnb": {
+    "sector_name": "الأغذية والمشروبات",
+    "metrics": {
+      "digital_maturity": {"min": 15, "avg": 40, "top": 75, "unit": "score"},
+      "marketing_budget_pct": {"min": 3, "avg": 10, "top": 20, "unit": "percent"},
+      "customer_retention": {"min": 25, "avg": 55, "top": 80, "unit": "percent"},
+      "social_media_engagement": {"min": 1, "avg": 4, "top": 10, "unit": "percent"},
+      "website_conversion": {"min": 0.3, "avg": 1.5, "top": 4, "unit": "percent"},
+      "customer_acquisition_cost": {"min": 15, "avg": 80, "top": 35, "unit": "SAR"},
+      "customer_lifetime_value": {"min": 200, "avg": 1500, "top": 5000, "unit": "SAR"},
+      "nps_score": {"min": -15, "avg": 25, "top": 65, "unit": "score"},
+      "revenue_growth": {"min": -8, "avg": 12, "top": 40, "unit": "percent"},
+      "team_productivity": {"min": 25, "avg": 50, "top": 80, "unit": "score"}
+    }
+  },
+  "retail": {
+    "sector_name": "التجزئة",
+    "metrics": {
+      "digital_maturity": {"min": 18, "avg": 48, "top": 82, "unit": "score"},
+      "marketing_budget_pct": {"min": 3, "avg": 9, "top": 18, "unit": "percent"},
+      "customer_retention": {"min": 30, "avg": 58, "top": 82, "unit": "percent"},
+      "social_media_engagement": {"min": 0.8, "avg": 3, "top": 8, "unit": "percent"},
+      "website_conversion": {"min": 0.5, "avg": 2.5, "top": 6, "unit": "percent"},
+      "customer_acquisition_cost": {"min": 20, "avg": 120, "top": 50, "unit": "SAR"},
+      "customer_lifetime_value": {"min": 500, "avg": 3000, "top": 10000, "unit": "SAR"},
+      "nps_score": {"min": -10, "avg": 28, "top": 68, "unit": "score"},
+      "revenue_growth": {"min": -5, "avg": 8, "top": 28, "unit": "percent"},
+      "team_productivity": {"min": 28, "avg": 52, "top": 78, "unit": "score"}
+    }
+  },
+  "professional_services": {
+    "sector_name": "الخدمات المهنية",
+    "metrics": {
+      "digital_maturity": {"min": 15, "avg": 38, "top": 72, "unit": "score"},
+      "marketing_budget_pct": {"min": 1, "avg": 6, "top": 12, "unit": "percent"},
+      "customer_retention": {"min": 50, "avg": 75, "top": 95, "unit": "percent"},
+      "social_media_engagement": {"min": 0.3, "avg": 1.5, "top": 4, "unit": "percent"},
+      "website_conversion": {"min": 0.5, "avg": 2.2, "top": 6, "unit": "percent"},
+      "customer_acquisition_cost": {"min": 100, "avg": 600, "top": 250, "unit": "SAR"},
+      "customer_lifetime_value": {"min": 3000, "avg": 15000, "top": 50000, "unit": "SAR"},
+      "nps_score": {"min": 0, "avg": 40, "top": 78, "unit": "score"},
+      "revenue_growth": {"min": -3, "avg": 10, "top": 25, "unit": "percent"},
+      "team_productivity": {"min": 35, "avg": 60, "top": 88, "unit": "score"}
+    }
+  },
+  "real_estate": {
+    "sector_name": "العقارات",
+    "metrics": {
+      "digital_maturity": {"min": 12, "avg": 35, "top": 70, "unit": "score"},
+      "marketing_budget_pct": {"min": 2, "avg": 7, "top": 15, "unit": "percent"},
+      "customer_retention": {"min": 20, "avg": 45, "top": 72, "unit": "percent"},
+      "social_media_engagement": {"min": 0.4, "avg": 2, "top": 5.5, "unit": "percent"},
+      "website_conversion": {"min": 0.3, "avg": 1.8, "top": 4.5, "unit": "percent"},
+      "customer_acquisition_cost": {"min": 200, "avg": 1500, "top": 600, "unit": "SAR"},
+      "customer_lifetime_value": {"min": 5000, "avg": 25000, "top": 80000, "unit": "SAR"},
+      "nps_score": {"min": -15, "avg": 22, "top": 60, "unit": "score"},
+      "revenue_growth": {"min": -10, "avg": 8, "top": 30, "unit": "percent"},
+      "team_productivity": {"min": 25, "avg": 48, "top": 75, "unit": "score"}
+    }
+  },
+  "fitness": {
+    "sector_name": "اللياقة والرياضة",
+    "metrics": {
+      "digital_maturity": {"min": 20, "avg": 50, "top": 80, "unit": "score"},
+      "marketing_budget_pct": {"min": 3, "avg": 10, "top": 18, "unit": "percent"},
+      "customer_retention": {"min": 25, "avg": 52, "top": 78, "unit": "percent"},
+      "social_media_engagement": {"min": 1.2, "avg": 4.5, "top": 12, "unit": "percent"},
+      "website_conversion": {"min": 0.8, "avg": 3, "top": 7, "unit": "percent"},
+      "customer_acquisition_cost": {"min": 30, "avg": 150, "top": 60, "unit": "SAR"},
+      "customer_lifetime_value": {"min": 500, "avg": 3000, "top": 10000, "unit": "SAR"},
+      "nps_score": {"min": -10, "avg": 30, "top": 72, "unit": "score"},
+      "revenue_growth": {"min": -5, "avg": 15, "top": 40, "unit": "percent"},
+      "team_productivity": {"min": 30, "avg": 55, "top": 82, "unit": "score"}
+    }
+  },
+  "crafts": {
+    "sector_name": "الحرف اليدوية والمنتجات المحلية",
+    "metrics": {
+      "digital_maturity": {"min": 8, "avg": 30, "top": 65, "unit": "score"},
+      "marketing_budget_pct": {"min": 1, "avg": 5, "top": 12, "unit": "percent"},
+      "customer_retention": {"min": 20, "avg": 48, "top": 75, "unit": "percent"},
+      "social_media_engagement": {"min": 1, "avg": 5, "top": 15, "unit": "percent"},
+      "website_conversion": {"min": 0.3, "avg": 1.5, "top": 4, "unit": "percent"},
+      "customer_acquisition_cost": {"min": 10, "avg": 60, "top": 25, "unit": "SAR"},
+      "customer_lifetime_value": {"min": 150, "avg": 800, "top": 3000, "unit": "SAR"},
+      "nps_score": {"min": -5, "avg": 35, "top": 75, "unit": "score"},
+      "revenue_growth": {"min": -8, "avg": 12, "top": 35, "unit": "percent"},
+      "team_productivity": {"min": 20, "avg": 42, "top": 72, "unit": "score"}
+    }
+  }
+}
