@@ -1,0 +1,33 @@
+# Environment files
+.env
+.env.local
+.env.production
+
+# Composer dependencies
+/vendor/
+
+# Uploads
+/assets/uploads/*
+!/assets/uploads/.gitkeep
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/logs/
+
+# Cache
+/cache/
+*.cache
+
+# Compiled files
+*.phar

@@ -1,0 +1,62 @@
+{
+  "app": {
+    "name": "Marketing AI",
+    "title": "نظام التقييم التسويقي الذكي",
+    "version": "2.0"
+  },
+  "auth": {
+    "login": "تسجيل الدخول",
+    "register": "إنشاء حساب",
+    "logout": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "fullName": "الاسم الكامل",
+    "phone": "رقم الجوال",
+    "noAccount": "ليس لديك حساب؟",
+    "hasAccount": "لديك حساب بالفعل؟"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "welcome": "مرحباً بك",
+    "completedSessions": "التقييمات المكتملة",
+    "activeSessions": "التقييمات الجارية",
+    "avgMaturity": "متوسط النضج",
+    "reports": "التقارير المتاحة",
+    "recentSessions": "آخر التقييمات",
+    "noSessions": "لا توجد تقييمات بعد"
+  },
+  "assessment": {
+    "start": "بدء تقييم جديد",
+    "continue": "متابعة",
+    "complete": "إنهاء التقييم",
+    "skip": "تخطي السؤال",
+    "next": "السؤال التالي",
+    "previous": "السؤال السابق",
+    "progress": "التقدم في التقييم",
+    "question": "سؤال",
+    "of": "من",
+    "fullAssessment": "تقييم شامل",
+    "quickAssessment": "تقييم سريع",
+    "focusedAssessment": "تقييم مركز"
+  },
+  "results": {
+    "title": "نتائج التقييم",
+    "overallScore": "مستوى النضج العام",
+    "strengths": "نقاط القوة",
+    "weaknesses": "نقاط الضعف",
+    "recommendations": "التوصيات",
+    "downloadReport": "تحميل التقرير",
+    "backToDashboard": "العودة للوحة التحكم"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "back": "رجوع",
+    "confirm": "تأكيد",
+    "error": "حدث خطأ",
+    "success": "تمت العملية بنجاح"
+  }
+}

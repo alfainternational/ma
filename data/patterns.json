@@ -1,0 +1,467 @@
+{
+  "red_flags": [
+    {
+      "id": "RF001",
+      "name": "انخفاض الإيرادات المستمر",
+      "condition": "revenue_growth < -10",
+      "severity": "critical",
+      "description": "الإيرادات تنخفض بنسبة تزيد عن 10% مما يشير إلى مشكلة هيكلية",
+      "recommended_action": "مراجعة فورية لنموذج العمل واستراتيجية التسويق",
+      "expert_id": "financial_analyst"
+    },
+    {
+      "id": "RF002",
+      "name": "معدل فقدان عملاء مرتفع",
+      "condition": "customer_retention < 50",
+      "severity": "critical",
+      "description": "أكثر من نصف العملاء لا يعودون، مما يعني مشكلة خطيرة في الاحتفاظ بالعملاء",
+      "recommended_action": "تطبيق برنامج ولاء عاجل ودراسة أسباب عدم الرضا",
+      "expert_id": "consumer_psychologist"
+    },
+    {
+      "id": "RF003",
+      "name": "غياب الحضور الرقمي",
+      "condition": "digital_maturity < 15",
+      "severity": "high",
+      "description": "المنشأة تفتقر تقريباً لأي حضور رقمي في عصر التحول الرقمي",
+      "recommended_action": "بناء حضور رقمي أساسي فوراً: موقع إلكتروني وحسابات تواصل اجتماعي",
+      "expert_id": "digital_marketing_expert"
+    },
+    {
+      "id": "RF004",
+      "name": "هدر ميزانية التسويق",
+      "condition": "marketing_roi < 0.5",
+      "severity": "high",
+      "description": "العائد على الاستثمار التسويقي ضعيف جداً مما يعني هدراً في الميزانية",
+      "recommended_action": "إعادة توزيع الميزانية التسويقية والتركيز على القنوات الأكثر فعالية",
+      "expert_id": "financial_analyst"
+    },
+    {
+      "id": "RF005",
+      "name": "هوامش ربح منخفضة",
+      "condition": "profit_margin < 5",
+      "severity": "high",
+      "description": "هوامش الربح منخفضة بشكل خطير مما يهدد استدامة العمل",
+      "recommended_action": "مراجعة التسعير وتقليل التكاليف التشغيلية",
+      "expert_id": "financial_analyst"
+    },
+    {
+      "id": "RF006",
+      "name": "غياب الاستراتيجية التسويقية",
+      "condition": "has_marketing_strategy == false",
+      "severity": "critical",
+      "description": "لا توجد استراتيجية تسويقية واضحة مما يؤدي لتشتت الجهود",
+      "recommended_action": "وضع خطة تسويقية استراتيجية شاملة مع أهداف قابلة للقياس",
+      "expert_id": "chief_strategist"
+    },
+    {
+      "id": "RF007",
+      "name": "شكاوى العملاء المتزايدة",
+      "condition": "nps_score < 0",
+      "severity": "critical",
+      "description": "مؤشر صافي الترويج سلبي مما يعني أن العملاء ينتقدون المنشأة أكثر من الترويج لها",
+      "recommended_action": "إنشاء نظام إدارة شكاوى فعال ومعالجة الأسباب الجذرية",
+      "expert_id": "consumer_psychologist"
+    },
+    {
+      "id": "RF008",
+      "name": "تكلفة اكتساب عميل مرتفعة",
+      "condition": "cac_to_ltv_ratio > 0.5",
+      "severity": "high",
+      "description": "تكلفة اكتساب العميل مرتفعة مقارنة بقيمته مدى الحياة",
+      "recommended_action": "تحسين قنوات الاكتساب والتركيز على التسويق بالمحتوى والإحالات",
+      "expert_id": "financial_analyst"
+    },
+    {
+      "id": "RF009",
+      "name": "عدم وجود بيانات أو قياسات",
+      "condition": "data_tracking_score < 20",
+      "severity": "high",
+      "description": "المنشأة لا تتتبع بياناتها التسويقية مما يجعل اتخاذ القرارات عشوائياً",
+      "recommended_action": "تطبيق نظام تتبع وتحليلات أساسي لجميع القنوات التسويقية",
+      "expert_id": "data_scientist"
+    },
+    {
+      "id": "RF010",
+      "name": "ضعف الهوية البصرية",
+      "condition": "brand_consistency < 30",
+      "severity": "medium",
+      "description": "الهوية البصرية ضعيفة أو غير متسقة مما يضعف التعرف على العلامة",
+      "recommended_action": "تطوير دليل هوية بصرية متكامل وتطبيقه على جميع نقاط التواصل",
+      "expert_id": "brand_strategist"
+    },
+    {
+      "id": "RF011",
+      "name": "اعتماد مفرط على قناة واحدة",
+      "condition": "channel_concentration > 80",
+      "severity": "medium",
+      "description": "أكثر من 80% من الإيرادات تأتي من قناة تسويقية واحدة",
+      "recommended_action": "تنويع القنوات التسويقية لتقليل المخاطر",
+      "expert_id": "risk_manager"
+    },
+    {
+      "id": "RF012",
+      "name": "تأخر عن المنافسين رقمياً",
+      "condition": "digital_maturity < competitor_avg - 20",
+      "severity": "high",
+      "description": "النضج الرقمي أقل بكثير من متوسط المنافسين في القطاع",
+      "recommended_action": "وضع خطة تحول رقمي عاجلة مع جدول زمني محدد",
+      "expert_id": "digital_marketing_expert"
+    },
+    {
+      "id": "RF013",
+      "name": "عدم وجود فريق تسويق مؤهل",
+      "condition": "team_productivity < 30",
+      "severity": "high",
+      "description": "إنتاجية فريق التسويق منخفضة جداً مما يعيق تنفيذ الاستراتيجيات",
+      "recommended_action": "تدريب الفريق الحالي أو الاستعانة بمتخصصين خارجيين",
+      "expert_id": "operations_expert"
+    },
+    {
+      "id": "RF014",
+      "name": "غياب التخطيط للمحتوى",
+      "condition": "content_planning_score < 20",
+      "severity": "medium",
+      "description": "لا يوجد تقويم محتوى أو استراتيجية محتوى واضحة",
+      "recommended_action": "إعداد تقويم محتوى شهري مع تحديد الموضوعات والقنوات",
+      "expert_id": "digital_marketing_expert"
+    },
+    {
+      "id": "RF015",
+      "name": "عدم مواكبة اتجاهات السوق",
+      "condition": "trend_adoption_score < 20",
+      "severity": "medium",
+      "description": "المنشأة لا تتبنى الاتجاهات الجديدة في التسويق والتقنية",
+      "recommended_action": "تخصيص وقت وموارد لمتابعة وتجربة الاتجاهات التسويقية الحديثة",
+      "expert_id": "innovation_scout"
+    }
+  ],
+  "green_flags": [
+    {
+      "id": "GF001",
+      "name": "رضا عملاء مرتفع",
+      "condition": "nps_score > 50",
+      "strength": "strong",
+      "description": "مؤشر صافي الترويج مرتفع مما يعني قاعدة عملاء مخلصة ومروجة",
+      "leverage_action": "استثمار رضا العملاء في برامج الإحالة والشهادات",
+      "expert_id": "consumer_psychologist"
+    },
+    {
+      "id": "GF002",
+      "name": "نمو إيرادات قوي",
+      "condition": "revenue_growth > 20",
+      "strength": "strong",
+      "description": "نمو الإيرادات يتجاوز 20% سنوياً مما يشير لنموذج عمل ناجح",
+      "leverage_action": "الاستثمار في التوسع مع الحفاظ على جودة الخدمة",
+      "expert_id": "financial_analyst"
+    },
+    {
+      "id": "GF003",
+      "name": "علامة تجارية قوية",
+      "condition": "brand_awareness > 60",
+      "strength": "strong",
+      "description": "وعي قوي بالعلامة التجارية في السوق المستهدف",
+      "leverage_action": "توسيع خطوط المنتجات والخدمات تحت مظلة العلامة القوية",
+      "expert_id": "brand_strategist"
+    },
+    {
+      "id": "GF004",
+      "name": "احتفاظ عملاء ممتاز",
+      "condition": "customer_retention > 80",
+      "strength": "strong",
+      "description": "معدل احتفاظ بالعملاء مرتفع يتجاوز 80%",
+      "leverage_action": "تطوير برامج البيع المتقاطع والترقية للعملاء الحاليين",
+      "expert_id": "consumer_psychologist"
+    },
+    {
+      "id": "GF005",
+      "name": "نضج رقمي متقدم",
+      "condition": "digital_maturity > 70",
+      "strength": "strong",
+      "description": "المنشأة تتمتع بحضور رقمي ناضج ومتكامل",
+      "leverage_action": "التركيز على الأتمتة والتخصيص والذكاء الاصطناعي",
+      "expert_id": "digital_marketing_expert"
+    },
+    {
+      "id": "GF006",
+      "name": "عائد استثمار تسويقي مرتفع",
+      "condition": "marketing_roi > 3",
+      "strength": "strong",
+      "description": "كل ريال مستثمر في التسويق يعود بأكثر من 3 ريالات",
+      "leverage_action": "زيادة الميزانية التسويقية تدريجياً مع مراقبة الأداء",
+      "expert_id": "financial_analyst"
+    },
+    {
+      "id": "GF007",
+      "name": "تفاعل عالٍ على وسائل التواصل",
+      "condition": "social_media_engagement > 5",
+      "strength": "moderate",
+      "description": "معدل التفاعل على وسائل التواصل الاجتماعي أعلى من المتوسط",
+      "leverage_action": "تحويل التفاعل إلى مبيعات عبر استراتيجية التسويق الاجتماعي",
+      "expert_id": "digital_marketing_expert"
+    },
+    {
+      "id": "GF008",
+      "name": "فريق تسويق منتج",
+      "condition": "team_productivity > 75",
+      "strength": "moderate",
+      "description": "إنتاجية فريق التسويق مرتفعة وتنفيذ الحملات فعال",
+      "leverage_action": "توسيع صلاحيات الفريق والاستثمار في تطويرهم",
+      "expert_id": "operations_expert"
+    },
+    {
+      "id": "GF009",
+      "name": "تحليلات بيانات متقدمة",
+      "condition": "data_tracking_score > 70",
+      "strength": "moderate",
+      "description": "المنشأة تتتبع وتحلل بياناتها التسويقية بشكل جيد",
+      "leverage_action": "الانتقال للتحليلات التنبؤية واتخاذ القرارات المبنية على البيانات",
+      "expert_id": "data_scientist"
+    },
+    {
+      "id": "GF010",
+      "name": "تنويع قنوات تسويقية صحي",
+      "condition": "channel_concentration < 40",
+      "strength": "moderate",
+      "description": "الإيرادات موزعة بشكل صحي على قنوات متعددة",
+      "leverage_action": "تحسين أداء كل قناة وتعزيز التكامل بينها",
+      "expert_id": "risk_manager"
+    }
+  ],
+  "anomalies": [
+    {
+      "id": "AN001",
+      "name": "إيرادات مرتفعة بشكل غير طبيعي",
+      "condition": "revenue_growth > sector_top * 1.5",
+      "type": "positive_outlier",
+      "description": "نمو الإيرادات أعلى بكثير من أفضل المنشآت في القطاع - قد يكون غير مستدام",
+      "investigation": "التحقق من مصدر النمو: هل هو عضوي أم ناتج عن عوامل مؤقتة؟",
+      "expert_id": "financial_analyst"
+    },
+    {
+      "id": "AN002",
+      "name": "تناقض بين الرضا والاحتفاظ",
+      "condition": "nps_score > 50 && customer_retention < 50",
+      "type": "inconsistency",
+      "description": "العملاء راضون لكنهم لا يعودون - تناقض يستدعي التحقيق",
+      "investigation": "دراسة أسباب عدم العودة رغم الرضا: تسعير، موقع، بدائل أفضل؟",
+      "expert_id": "consumer_psychologist"
+    },
+    {
+      "id": "AN003",
+      "name": "ميزانية تسويق مرتفعة بلا نتائج",
+      "condition": "marketing_budget_pct > sector_top && revenue_growth < sector_avg",
+      "type": "inefficiency",
+      "description": "إنفاق تسويقي أعلى من المعيار لكن النتائج أقل من المتوسط",
+      "investigation": "تدقيق توزيع الميزانية وفعالية كل قناة تسويقية",
+      "expert_id": "financial_analyst"
+    },
+    {
+      "id": "AN004",
+      "name": "تفاعل رقمي عالي بلا تحويل",
+      "condition": "social_media_engagement > sector_top && website_conversion < sector_min",
+      "type": "conversion_gap",
+      "description": "تفاعل ممتاز على وسائل التواصل لكن التحويل للمبيعات شبه معدوم",
+      "investigation": "فحص رحلة العميل من التفاعل للشراء وتحديد نقاط التسرب",
+      "expert_id": "digital_marketing_expert"
+    },
+    {
+      "id": "AN005",
+      "name": "تكلفة اكتساب أقل بكثير من المعيار",
+      "condition": "customer_acquisition_cost < sector_min * 0.5",
+      "type": "positive_outlier",
+      "description": "تكلفة اكتساب العميل منخفضة جداً - قد تعكس ميزة تنافسية أو قصوراً في القياس",
+      "investigation": "التحقق من دقة الحساب والتأكد من شمول جميع التكاليف",
+      "expert_id": "data_scientist"
+    },
+    {
+      "id": "AN006",
+      "name": "فجوة كبيرة في النضج الرقمي",
+      "condition": "digital_maturity < sector_avg * 0.4",
+      "type": "critical_gap",
+      "description": "المنشأة متأخرة رقمياً بشكل كبير عن متوسط القطاع",
+      "investigation": "تقييم الجاهزية للتحول الرقمي وتحديد العوائق الأساسية",
+      "expert_id": "digital_marketing_expert"
+    },
+    {
+      "id": "AN007",
+      "name": "قيمة عميل مدى الحياة استثنائية",
+      "condition": "customer_lifetime_value > sector_top * 2",
+      "type": "positive_outlier",
+      "description": "قيمة العميل مدى الحياة أعلى بكثير من المعيار - فرصة للدراسة والتكرار",
+      "investigation": "تحليل خصائص العملاء ذوي القيمة العالية لاستهداف المزيد منهم",
+      "expert_id": "consumer_psychologist"
+    },
+    {
+      "id": "AN008",
+      "name": "تناقض بين الإنتاجية والنتائج",
+      "condition": "team_productivity > 70 && revenue_growth < 0",
+      "type": "misalignment",
+      "description": "الفريق يعمل بكفاءة لكن النتائج سلبية - خلل في التوجيه الاستراتيجي",
+      "investigation": "مراجعة توجيه الجهود والتأكد من مواءمتها مع أهداف العمل",
+      "expert_id": "chief_strategist"
+    }
+  ],
+  "sector_patterns": {
+    "education": {
+      "sector_name": "التعليم الخاص",
+      "common_strengths": [
+        "ارتفاع قيمة العميل مدى الحياة بسبب الاشتراكات الطويلة",
+        "إمكانية بناء سمعة قوية عبر الإحالات",
+        "فرص كبيرة للتسويق بالمحتوى التعليمي"
+      ],
+      "common_weaknesses": [
+        "موسمية الطلب وتركزه في فترات التسجيل",
+        "صعوبة التمييز عن المنافسين",
+        "بطء تبني التقنيات الرقمية"
+      ],
+      "critical_metrics": ["customer_retention", "nps_score", "customer_lifetime_value"],
+      "growth_levers": ["content_marketing", "referral_programs", "digital_transformation"],
+      "seasonal_factors": {
+        "peak_months": [1, 2, 8, 9],
+        "low_months": [6, 7],
+        "registration_periods": ["يناير-فبراير", "أغسطس-سبتمبر"]
+      }
+    },
+    "healthcare": {
+      "sector_name": "الرعاية الصحية",
+      "common_strengths": [
+        "طلب مستمر ومتنامٍ على الخدمات الصحية",
+        "ارتفاع الثقة كعامل حاسم في اختيار المزود",
+        "إمكانية بناء علاقات طويلة الأمد مع المرضى"
+      ],
+      "common_weaknesses": [
+        "قيود تنظيمية على الإعلان والتسويق",
+        "حساسية عالية للسمعة والمراجعات السلبية",
+        "تكلفة اكتساب عميل مرتفعة"
+      ],
+      "critical_metrics": ["nps_score", "customer_retention", "brand_awareness"],
+      "growth_levers": ["reputation_management", "patient_experience", "telemedicine"],
+      "seasonal_factors": {
+        "peak_months": [1, 2, 3, 10, 11, 12],
+        "low_months": [6, 7, 8],
+        "health_awareness_events": ["أكتوبر-التوعية بسرطان الثدي", "نوفمبر-السكري", "رمضان-التغذية"]
+      }
+    },
+    "fnb": {
+      "sector_name": "الأغذية والمشروبات",
+      "common_strengths": [
+        "سوق كبير ومتنامٍ في المملكة",
+        "تأثير قوي لوسائل التواصل الاجتماعي",
+        "إمكانية التوسع عبر الفروع والتوصيل"
+      ],
+      "common_weaknesses": [
+        "منافسة شديدة وهوامش ربح ضيقة",
+        "حساسية عالية للمواقع والمراجعات",
+        "تكاليف تشغيلية مرتفعة"
+      ],
+      "critical_metrics": ["social_media_engagement", "customer_retention", "revenue_growth"],
+      "growth_levers": ["delivery_platforms", "social_media_marketing", "loyalty_programs"],
+      "seasonal_factors": {
+        "peak_months": [1, 3, 10, 11, 12],
+        "low_months": [2, 6, 7],
+        "special_events": ["رمضان", "اليوم الوطني", "موسم الرياض"]
+      }
+    },
+    "retail": {
+      "sector_name": "التجزئة",
+      "common_strengths": [
+        "تنوع قنوات البيع (فعلية ورقمية)",
+        "إمكانية استخدام التجارة الإلكترونية للتوسع",
+        "بيانات عملاء غنية لتحسين التسويق"
+      ],
+      "common_weaknesses": [
+        "منافسة من العلامات العالمية والمتاجر الإلكترونية",
+        "تكاليف إيجار ومخزون مرتفعة",
+        "تغير سريع في تفضيلات المستهلكين"
+      ],
+      "critical_metrics": ["website_conversion", "customer_acquisition_cost", "revenue_growth"],
+      "growth_levers": ["ecommerce", "omnichannel_strategy", "personalization"],
+      "seasonal_factors": {
+        "peak_months": [1, 6, 9, 11, 12],
+        "low_months": [2, 3, 7],
+        "special_events": ["الجمعة البيضاء", "رمضان", "العودة للمدارس", "اليوم الوطني"]
+      }
+    },
+    "professional_services": {
+      "sector_name": "الخدمات المهنية",
+      "common_strengths": [
+        "هوامش ربح مرتفعة نسبياً",
+        "إمكانية بناء سمعة عبر الخبرة والمعرفة",
+        "علاقات عملاء طويلة الأمد"
+      ],
+      "common_weaknesses": [
+        "صعوبة التوسع بسبب الاعتماد على الكوادر البشرية",
+        "تحديات في تسعير الخدمات غير الملموسة",
+        "محدودية الوعي بأهمية التسويق"
+      ],
+      "critical_metrics": ["customer_lifetime_value", "nps_score", "customer_retention"],
+      "growth_levers": ["thought_leadership", "content_marketing", "strategic_partnerships"],
+      "seasonal_factors": {
+        "peak_months": [1, 2, 3, 9, 10, 11],
+        "low_months": [6, 7, 8],
+        "budget_cycles": ["بداية السنة المالية", "نهاية الربع"]
+      }
+    },
+    "real_estate": {
+      "sector_name": "العقارات",
+      "common_strengths": [
+        "قيمة صفقات مرتفعة تبرر إنفاقاً تسويقياً أكبر",
+        "سوق عقاري نشط مدعوم برؤية 2030",
+        "إمكانية التسويق الرقمي المتقدم (جولات افتراضية)"
+      ],
+      "common_weaknesses": [
+        "دورة بيع طويلة ومعقدة",
+        "اعتماد كبير على العلاقات الشخصية",
+        "تقلبات السوق وتأثر بالعوامل الاقتصادية"
+      ],
+      "critical_metrics": ["customer_acquisition_cost", "website_conversion", "brand_awareness"],
+      "growth_levers": ["digital_tours", "crm_optimization", "targeted_advertising"],
+      "seasonal_factors": {
+        "peak_months": [1, 2, 3, 9, 10],
+        "low_months": [6, 7, 8],
+        "market_events": ["معرض ريستاتكس", "إعلانات المشاريع الحكومية"]
+      }
+    },
+    "fitness": {
+      "sector_name": "اللياقة والرياضة",
+      "common_strengths": [
+        "اهتمام متزايد بالصحة واللياقة في المجتمع السعودي",
+        "دعم حكومي لقطاع الرياضة ضمن رؤية 2030",
+        "إمكانية نماذج اشتراك توفر إيرادات متكررة"
+      ],
+      "common_weaknesses": [
+        "معدلات انسحاب مرتفعة من الاشتراكات",
+        "موسمية الطلب مع ذروة في بداية العام",
+        "منافسة متزايدة من التطبيقات والمحتوى الرقمي"
+      ],
+      "critical_metrics": ["customer_retention", "social_media_engagement", "nps_score"],
+      "growth_levers": ["community_building", "digital_content", "corporate_wellness"],
+      "seasonal_factors": {
+        "peak_months": [1, 2, 3, 9, 10],
+        "low_months": [6, 7, 8],
+        "motivation_events": ["بداية السنة", "ما قبل الصيف", "ما بعد رمضان"]
+      }
+    },
+    "crafts": {
+      "sector_name": "الحرف اليدوية والمنتجات المحلية",
+      "common_strengths": [
+        "تميز المنتج وقصة العلامة التجارية الأصيلة",
+        "دعم حكومي للحرف والصناعات المحلية",
+        "طلب متزايد على المنتجات المحلية والأصيلة"
+      ],
+      "common_weaknesses": [
+        "صعوبة التوسع مع الحفاظ على الجودة اليدوية",
+        "محدودية الخبرة التسويقية والرقمية",
+        "تحديات في التسعير والمنافسة مع المنتجات المصنعة"
+      ],
+      "critical_metrics": ["social_media_engagement", "website_conversion", "brand_awareness"],
+      "growth_levers": ["storytelling", "ecommerce_platforms", "cultural_events"],
+      "seasonal_factors": {
+        "peak_months": [1, 9, 11, 12],
+        "low_months": [5, 6, 7],
+        "special_events": ["اليوم الوطني", "يوم التأسيس", "المعارض الحرفية", "موسم الهدايا"]
+      }
+    }
+  }
+}
