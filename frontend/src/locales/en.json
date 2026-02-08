@@ -1,0 +1,62 @@
+{
+  "app": {
+    "name": "Marketing AI",
+    "title": "Marketing AI Assessment System",
+    "version": "2.0"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password",
+    "fullName": "Full Name",
+    "phone": "Phone Number",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome",
+    "completedSessions": "Completed Assessments",
+    "activeSessions": "Active Assessments",
+    "avgMaturity": "Average Maturity",
+    "reports": "Available Reports",
+    "recentSessions": "Recent Assessments",
+    "noSessions": "No assessments yet"
+  },
+  "assessment": {
+    "start": "Start New Assessment",
+    "continue": "Continue",
+    "complete": "Complete Assessment",
+    "skip": "Skip Question",
+    "next": "Next Question",
+    "previous": "Previous Question",
+    "progress": "Assessment Progress",
+    "question": "Question",
+    "of": "of",
+    "fullAssessment": "Full Assessment",
+    "quickAssessment": "Quick Assessment",
+    "focusedAssessment": "Focused Assessment"
+  },
+  "results": {
+    "title": "Assessment Results",
+    "overallScore": "Overall Maturity Level",
+    "strengths": "Strengths",
+    "weaknesses": "Weaknesses",
+    "recommendations": "Recommendations",
+    "downloadReport": "Download Report",
+    "backToDashboard": "Back to Dashboard"
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "confirm": "Confirm",
+    "error": "An error occurred",
+    "success": "Operation successful"
+  }
+}
